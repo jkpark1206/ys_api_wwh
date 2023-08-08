@@ -1,0 +1,29 @@
+# 登录
+-
+ id : 1
+ title : 获取所有任务列表
+ method: post
+ url: api/task/list
+ req_data: {"page": "1",
+            "limit":100,
+            "keywords":"",
+            "sort_by":0,
+            "task_status_list":[0,1,2,3,4,5],
+            "vendor_keywords":"",
+            "start_time":"2022-06-27 17:39:20",
+            "end_time":"2023-10-30 17:39:19"}
+
+
+-
+ id : 2
+ title : 获取不存在任务时间的任务列表
+ method: post
+ url: api/task/list
+ req_data: {"page": "1",
+            "limit":100,
+            "keywords":"",
+            "sort_by":0,
+            "task_status_list":[0,1,2,3,4,5],
+            "vendor_keywords":"",
+            "start_time":"2022-06-27 17:39:20",
+            "end_time":"2022-10-30 17:39:19"}

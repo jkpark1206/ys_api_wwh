@@ -1,0 +1,44 @@
+import csv
+from config.config import local_config
+
+class Csv_Read:
+    def __init__(self):
+        self.firmwares_file =  open(local_config.Firmware_csv_path,'r',encoding='utf-8')
+            #读取csv文件内容,返回为多个列表
+        self.firmware = csv.reader(self.firmwares_file)
+
+
+    def Firmware_name(self):
+        for fw in self.firmware:
+            firm_name = fw[0]
+            return firm_name
+        self.firmwares_file.close()
+
+    def Firmware_path(self):
+        for fw in self.firmware:
+            firm_path = fw[1]
+            return firm_path
+        self.firmwares_file.close()
+
+    def Md5(self):
+        for fw in self.firmware:
+            md5 = fw[2]
+            return md5
+        self.firmwares_file.close()
+
+
+
+# if __name__ == '__main__':
+#     Csv_Read().Firmware_name()
+
+#读取固件路径，写入csv文件中
+import os
+import csv
+l=[]
+for filename in os.listdir(r'E:\\易识\\网关、采集器固件（含内蒙古电力项目）\\内蒙古电科项目客户提供\\安全测试用固件汇总'):
+    l.append('E:\\易识\\网关、采集器固件（含内蒙古电力项目）\\内蒙古电科项目客户提供\\安全测试用固件汇总\\'+filename)
+
+f=open("text.csv","w")
+for line in l:
+    f.write(line+'\n')
+f.close()
