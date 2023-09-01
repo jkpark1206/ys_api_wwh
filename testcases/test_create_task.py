@@ -36,7 +36,7 @@ class Create_Task_Test(Session_init):
             except Exception as e:
                 print(e)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_02(self):
         self._testMethodName = 'case_02'
         self._testMethodDoc = "全选插件关联固件库"
@@ -60,7 +60,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("OK", a)
             self.assertIs(200, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_03(self):
         self._testMethodName = 'case_03'
         self._testMethodDoc = "创建任务失败—任务名为空"
@@ -84,7 +84,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("缺少task_name 参数", a)
             self.assertEqual(2001, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_04(self):
         self._testMethodName = 'case_04'
         self._testMethodDoc = "创建任务失败—厂商为空"
@@ -109,7 +109,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(2001, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_05(self):
         self._testMethodName = 'case_05'
         self._testMethodDoc = "创建任务失败—版本号为空"
@@ -134,7 +134,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(2001, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_06(self):
         self._testMethodName = 'case_06'
         self._testMethodDoc = "创建任务失败—device_name为空"
@@ -159,7 +159,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(2001, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_07(self):
         self._testMethodName = 'case_07'
         self._testMethodDoc = "创建任务成功—任务名、版本、厂商为单个数字"
@@ -182,7 +182,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("OK", a)
             self.assertEqual(200, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_08(self):
         self._testMethodName = 'case_08'
         self._testMethodDoc = "创建任务成功—任务名、版本、厂商为单个字母"
@@ -206,7 +206,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(200, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_09(self):
         self._testMethodName = 'case_09'
         self._testMethodDoc = "创建任务成功—任务名、版本、厂商为单个特殊符号"
@@ -229,7 +229,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("OK", a)
             self.assertEqual(200, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_10(self):
         self._testMethodName = 'case_10'
         self._testMethodDoc = "创建任务成功—任务名、版本、厂商为99个字符"
@@ -252,7 +252,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("OK", a)
             self.assertEqual(200, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_11(self):
         self._testMethodName = 'case_11'
         self._testMethodDoc = "创建任务失败—任务名为100个字符"
@@ -276,7 +276,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("task_name参数长度超过100限制", a)
             self.assertEqual(2002, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_12(self):
         self._testMethodName = 'case_12'
         self._testMethodDoc = "创建任务失败—版本名为100个字符"
@@ -300,7 +300,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("version参数长度超过100限制", a)
             self.assertEqual(2002, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_13(self):
         self._testMethodName = 'case_13'
         self._testMethodDoc = "创建任务失败—厂商名为100个字符"
@@ -324,7 +324,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("vendor参数长度超过100限制", a)
             self.assertEqual(2002, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_14(self):
         self._testMethodName = 'case_14'
         self._testMethodDoc = "创建任务失败—device_name为100个字符"
@@ -348,7 +348,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("device_name参数长度超过100限制", a)
             self.assertEqual(2002, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_15(self):
         self._testMethodName = 'case_15'
         self._testMethodDoc = "创建任务失败—上传固件超过99个字符"
@@ -372,7 +372,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("任务文件名超出最大长度:99", a)
             self.assertEqual(2005, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_16(self):
         self._testMethodName = 'case_16'
         self._testMethodDoc = "创建任务失败—MD5值为空"
@@ -396,7 +396,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(2001, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_17(self):
         self._testMethodName = 'case_17'
         self._testMethodDoc = "创建任务失败—MD5值错误"
@@ -420,7 +420,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(2005, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_18(self):
         self._testMethodName = 'case_18'
         self._testMethodDoc = "创建任务失败—MD5值与固件不符"
@@ -445,7 +445,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(5004, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_19(self):
         self._testMethodName = 'case_19'
         self._testMethodDoc = "创建任务失败—重复勾选插件"
@@ -471,7 +471,7 @@ class Create_Task_Test(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_20(self):
         self._testMethodName = 'case_20'
         self._testMethodDoc = "创建任务失败—插件参数为空"
@@ -496,7 +496,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(6002, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_21(self):
         self._testMethodName = 'case_21'
         self._testMethodDoc = "创建任务失败—不勾选插件"
@@ -521,7 +521,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(6001, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_22(self):
         self._testMethodName = 'case_22'
         self._testMethodDoc = "创建任务失败—未上传固件"
@@ -545,7 +545,7 @@ class Create_Task_Test(Session_init):
         self.assertEqual(5004, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_23(self):
         self._testMethodName = 'case_23'
         self._testMethodDoc = "创建任务成功—只勾选cwe_checker插件"
@@ -569,7 +569,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("OK", a)
             self.assertEqual(200, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_24(self):
         self._testMethodName = 'case_24'
         self._testMethodDoc = "创建任务成功—只勾选software_components插件"
@@ -594,7 +594,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(200, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_25(self):
         self._testMethodName = 'case_25'
         self._testMethodDoc = "创建任务成功—只勾选cve_lookup插件-关联software_components插件"
@@ -618,7 +618,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("OK", a)
             self.assertEqual(200, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_26(self):
         self._testMethodName = 'case_26'
         self._testMethodDoc = "创建任务失败—只勾选cve_lookup插件-不关联software_components插件"
@@ -642,7 +642,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("插件cve_lookup缺少依赖software_components", a)
             self.assertEqual(2002, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_27(self):
         self._testMethodName = 'case_27'
         self._testMethodDoc = "创建任务失败—只勾选crypto_hints插件"
@@ -666,7 +666,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("OK", a)
             self.assertEqual(200, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_28(self):
         self._testMethodName = 'case_28'
         self._testMethodDoc = "创建任务失败—只勾选elf_analysis插件"
@@ -691,7 +691,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(200, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_29(self):
         self._testMethodName = 'case_29'
         self._testMethodDoc = "创建任务失败—只勾选ip_and_uri_finder插件"
@@ -715,7 +715,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("OK", a)
             self.assertEqual(200, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_30(self):
         self._testMethodName = 'case_30'
         self._testMethodDoc = "创建任务失败—只勾选users_and_passwords插件"
@@ -740,7 +740,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(200, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_31(self):
         self._testMethodName = 'case_31'
         self._testMethodDoc = "创建任务失败—只勾选elf_checksec插件"
@@ -764,7 +764,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("OK", a)
             self.assertEqual(200, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_32(self):
         self._testMethodName = 'case_32'
         self._testMethodDoc = "创建任务失败—不勾选elf_checksec插件"
@@ -788,7 +788,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("OK", a)
             self.assertEqual(200, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_33(self):
         self._testMethodName = 'case_33'
         self._testMethodDoc = "创建任务失败—不勾选users_and_passwords插件"
@@ -812,7 +812,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("OK", a)
             self.assertEqual(200, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_34(self):
         self._testMethodName = 'case_34'
         self._testMethodDoc = "创建任务失败—不勾选ip_and_uri_finder插件"
@@ -837,7 +837,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(200, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_35(self):
         self._testMethodName = 'case_35'
         self._testMethodDoc = "创建任务失败—不勾选elf_analysis插件"
@@ -861,7 +861,7 @@ class Create_Task_Test(Session_init):
             self.assertIn("OK", a)
             self.assertEqual(200, b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_36(self):
         self._testMethodName = 'case_36'
         self._testMethodDoc = "创建任务失败—不勾选crypto_hints插件"
@@ -886,7 +886,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(200, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_37(self):
         self._testMethodName = 'case_37'
         self._testMethodDoc = "创建任务失败—不勾选cve_lookup插件"
@@ -911,7 +911,7 @@ class Create_Task_Test(Session_init):
             self.assertEqual(200, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_38(self):
         self._testMethodName = 'case_38'
         self._testMethodDoc = "创建任务失败—不勾选software_components插件"

@@ -8,18 +8,22 @@ import hashlib
 import json
 #v2.10插件
 #plugin = '''["software_components","cve_lookup","crypto_hints","elf_analysis","elf_checksec","sensitive_msg"]'''
+#v2.10全选插件
+#plugin = '''["cwe_checker","software_components","cve_lookup","crypto_hints","elf_analysis","ip_and_uri_finder","users_and_passwords","elf_checksec"]'''
 
-plugin = '''["cwe_checker","software_components","cve_lookup","crypto_hints","elf_analysis","ip_and_uri_finder","users_and_passwords","elf_checksec"]'''
-#plugin = '''["software_components"]'''
+#v2.10敏感信息合并插件
+plugin = '''["software_components","cve_lookup","crypto_hints","elf_analysis","elf_checksec","sensitive_msg","cwe_checker"]'''
+
 #艾拉比插件cwe0
 #plugin = '''["software_components","cve_lookup","crypto_hints","elf_analysis","ip_and_uri_finder","users_and_passwords","elf_checksec"]'''
 
-URL ='http://192.168.1.208:8011/'
+#URL ='http://103.79.25.186:38011/'
+URL ='http://192.168.5.242:8011/'
 
 l=[]
 #1、修改此处的文件路径,读取该路径下所有固件
-for filename in os.listdir(r'C:\\Users\\Administrator\\Desktop\\gujianhuizong\\jizhunceshi'):
-    l.append('C:\\Users\\Administrator\\Desktop\\gujianhuizong\\jizhunceshi\\'+filename)
+# for filename in os.listdir(r'C:\\Users\\Administrator\\Desktop\\gujianhuizong\\新解包测试\\fact_extractor_test'):
+#     l.append('C:\\Users\\Administrator\\Desktop\\gujianhuizong\\新解包测试\\fact_extractor_test\\'+filename)
 
 
 # for filename in os.listdir(r'E:\\易识\\固件适配类型\\QNX'):
@@ -53,15 +57,10 @@ def traverse_folder(path) :
             # print(file_path)
             l.append(file_path)
     return l
-# traverse_folder('C:\\Users\\Administrator\\Desktop\\gujianhuizong\\jizhunceshi')
-# for i in l:
+traverse_folder('C:\\Users\\Administrator\\Desktop\\gujianhuizong\\xinjiebaoceshi\\fact_extractor_test')
+for a in l:
 #     a = i.split('\\')[-1]
-#     print(a)
-
-
-
-
-
+    print(a)
 
 
 
@@ -80,8 +79,8 @@ class Upload_firmware:
     def __init__(self):
         self.session = requests.session()
         data = {"username": 'wwh',
-                "password": '126cfbcd4d16ae6d25c9bfcae76d8ee4',
-                "anban_password": '6b5c557da96612408d2844af0d9f5e5d'}
+                "password": 'fcea920f7412b5da7be0cf42b8c93759',
+                "anban_password": 'f169d2236b9ba09a2ceb8a5c03581d41'}
         headers = {"Content-Type": "application/json"}
         res = self.session.post('{}api/user/login'.format(URL), json=data, headers=headers)
         self.token = 'Token ' + jsonpath(res.json(), '$.data.AuthToken')[0]
@@ -105,16 +104,16 @@ class Upload_firmware:
                     res2 = self.session.post('{}api/task/create'.format(URL),data= d,headers=h,files=f)
                     task_id = json.loads(res2.text)["data"]["id"]
                     d2 = {"task_id": task_id}
-                    res3 = self.session.post('{}api/task/start'.format(URL), json=d2, headers=h)
+                    res3 = self.session.put('{}api/task/start'.format(URL), json=d2, headers=h)
                     print(res3.text)
         except Exception as e:
                 print(e)
 
 
 
-if __name__ == '__main__':
-    # traverse_folder('C:\\Users\\Administrator\\Desktop\\gujianhuizong\\jizhunceshi')
-    Upload_firmware().Create_firmtask()
+# if __name__ == '__main__':
+    # traverse_folder('F:\\易识\网关、采集器固件（含内蒙古电力项目）\\内蒙古电科项目客户提供\\上面文件解压后提取的固件汇总')
+    # Upload_firmware().Create_firmtask()
 
 
 

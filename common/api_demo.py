@@ -30,12 +30,40 @@ class ApiDefine:
 
     #获取固件分析任务列表
     def Task_list(self,session,data,headers):
-        res = session.post('{}api/task/list'.format(local_config.URL),data=data,headers=headers)
+        res = session.get('{}api/task/list'.format(local_config.URL),data=data,headers=headers)
         return res.text
 
     #创建固件扫描分析任务
     def Create_task(self,session,data,headers,file):
         res = session.post('{}api/task/create'.format(local_config.URL),data=data,headers=headers,files=file)
+        return res.text
+
+    #创建任务2
+    def Create_task_2(self,session,device_name,task_name,vendor,version,plugin,file_md5,task_lib_tag,headers,file):
+        d = {
+            "device_name": device_name,
+            "task_name": task_name,
+            "vendor": vendor,
+            "version": version,
+            "plugin": plugin,
+            "file_md5": file_md5,
+            "task_lib_tag": task_lib_tag
+        }
+        res = session.post('{}api/task/create'.format(local_config.URL),data=d,headers=headers,files=file)
+        return res.text
+
+    #修改固件分析任务
+    def Fix_task(self,session, task_id,device_name,task_name,vendor,version,plugin,headers):
+        d = {
+            " task_id": task_id,
+            "device_name": device_name,
+            "task_name": task_name,
+            "vendor": vendor,
+            "version": version,
+            "plugin": plugin,
+            "task_lib_tag": "false"
+        }
+        res = session.put('{}api/task/create'.format(local_config.URL),data=d,headers=headers)
         return res.text
 
     #开始固件任务

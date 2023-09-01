@@ -12,8 +12,8 @@ import os
 import csv
 l=[]
 #1、修改此处的文件路径即可
-for filename in os.listdir(r'E:\\易识\\网关、采集器固件（含内蒙古电力项目）\\内蒙古电科项目客户提供\\安全测试用固件汇总'):
-    l.append('E:\\易识\\网关、采集器固件（含内蒙古电力项目）\\内蒙古电科项目客户提供\\安全测试用固件汇总\\'+filename)
+for filename in os.listdir(r'F:\\易识\\网关、采集器固件（含内蒙古电力项目）\\内蒙古电科项目客户提供\\安全测试用固件汇总'):
+    l.append('F:\\易识\\网关、采集器固件（含内蒙古电力项目）\\内蒙古电科项目客户提供\\安全测试用固件汇总\\'+filename)
 
 #基准测试固件路径
 # for filename in os.listdir(r'C:\\Users\\Administrator\\Desktop\\gujianhuizong\\jizhunceshi'):
