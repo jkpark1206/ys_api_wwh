@@ -39,7 +39,7 @@ class ApiDefine:
         return res.text
 
     #创建任务2
-    def Create_task_2(self,session,device_name,task_name,vendor,version,plugin,file_md5,task_lib_tag,headers,file):
+    def Create_task_2(self,session,device_name,task_name,vendor,version,plugin,file_md5,task_lib_tag,headers,filepath):
         d = {
             "device_name": device_name,
             "task_name": task_name,
@@ -49,19 +49,21 @@ class ApiDefine:
             "file_md5": file_md5,
             "task_lib_tag": task_lib_tag
         }
-        res = session.post('{}api/task/create'.format(local_config.URL),data=d,headers=headers,files=file)
+        with open(filepath, 'rb') as firm:
+            f = {'firmware': firm}
+            res = session.post('{}api/task/create'.format(local_config.URL),data=d,headers=headers,files=f)
         return res.text
 
-    #修改固件分析任务
-    def Fix_task(self,session, task_id,device_name,task_name,vendor,version,plugin,headers):
+    #编辑固件分析任务
+    def Fix_task(self,session,task_id,device_name,task_name,vendor,version,plugin,task_lib_tag,headers):
         d = {
-            " task_id": task_id,
+            "task_id": task_id,
             "device_name": device_name,
             "task_name": task_name,
             "vendor": vendor,
             "version": version,
             "plugin": plugin,
-            "task_lib_tag": "false"
+            "task_lib_tag": task_lib_tag
         }
         res = session.put('{}api/task/create'.format(local_config.URL),data=d,headers=headers)
         return res.text

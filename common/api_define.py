@@ -1,4 +1,4 @@
-import jsonpath
+from jsonpath import jsonpath
 import requests
 from loguru import logger
 from config.config import local_config
@@ -20,8 +20,9 @@ class APIDefine:
         url = local_config.URL+'/api/user/login'
         data = {"username":local_config.Username,"password":local_config.Passwd,"anban_password":local_config.Anban_Passwd}
         res = self.session.request(method,url, json = data,headers=self.session.headers)
+
         #赋予类变量APIDefine.AuthToken的值为提取的token值
-        APIDefine.AuthToken = 'Token {}'.format(jsonpath.jsonpath(res.json(),'$.data.AuthToken')[0])
+        APIDefine.AuthToken = 'Token ' + jsonpath(res.json(), '$.data.AuthToken')[0]
         return APIDefine.AuthToken
 
 

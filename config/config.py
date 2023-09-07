@@ -18,11 +18,11 @@ class config:
 
     @property
     def Passwd(self):
-        return '126cfbcd4d16ae6d25c9bfcae76d8ee4'
+        return 'fcea920f7412b5da7be0cf42b8c93759'
 
     @property
     def Anban_Passwd(self):
-        return '6b5c557da96612408d2844af0d9f5e5d'
+        return 'f169d2236b9ba09a2ceb8a5c03581d41'
 
 #配置连接数据库相关信息
     @property
@@ -113,17 +113,21 @@ class config:
 #勾选不同插件
     @property
     def Plugin_All(self):
-        return '''["cwe_checker","software_components","cve_lookup","crypto_hints","elf_analysis","ip_and_uri_finder","users_and_passwords","elf_checksec"]'''
+        return '''["cwe_checker","software_components","cve_lookup","crypto_hints","sensitive_msg","users_and_passwords","elf_checksec"]'''
 
 
     @property
     def Plugin_Cwe0(self):
-        return  '''["software_components","cve_lookup","crypto_hints","elf_analysis","ip_and_uri_finder","users_and_passwords","elf_checksec"]'''
+        return  '''["software_components","cve_lookup","crypto_hints","elf_analysis","sensitive_msg","elf_checksec"]'''
 
 
     @property
     def Plugin_Cve0(self):
-        return  '''["cwe_checker","software_components","crypto_hints","elf_analysis","ip_and_uri_finder","users_and_passwords","elf_checksec"]'''
+        return  '''["cwe_checker","software_components","crypto_hints","elf_analysis","sensitive_msg","elf_checksec"]'''
+
+    @property
+    def Plugin0(self):
+        return  '''[]'''
 
 
     @property
