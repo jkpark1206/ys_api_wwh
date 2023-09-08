@@ -14,7 +14,7 @@ class config:
 # 配置用户登录名、密码
     @property
     def Username(self):
-        return 'wwh'
+        return 'cxh'
 
     @property
     def Passwd(self):
@@ -23,6 +23,12 @@ class config:
     @property
     def Anban_Passwd(self):
         return 'f169d2236b9ba09a2ceb8a5c03581d41'
+
+#密保密码
+    @property
+    def Security_Password(self):
+        return 'update_user_password'
+
 
 #配置连接数据库相关信息
     @property
@@ -113,7 +119,7 @@ class config:
 #勾选不同插件
     @property
     def Plugin_All(self):
-        return '''["cwe_checker","software_components","cve_lookup","crypto_hints","sensitive_msg","users_and_passwords","elf_checksec"]'''
+        return '''["software_components","cve_lookup","crypto_hints","cwe_checker","elf_analysis","elf_checksec","sensitive_msg"]'''
 
 
     @property

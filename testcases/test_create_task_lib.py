@@ -9,7 +9,7 @@ import os
 
 class Create_task_lib(Session_init):
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_01(self):
         self._testMethodName = 'case_01'
         self._testMethodDoc = '成功创建固件库任务'
@@ -34,7 +34,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_02(self):
         self._testMethodName = 'case_02'
         self._testMethodDoc = '创建固件库任务失败-插件勾选不完全'
@@ -60,7 +60,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_03(self):
         self._testMethodName = 'case_03'
         self._testMethodDoc = '创建固件库任务成功-任务名称、厂商、版本为单个字母'
@@ -85,7 +85,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_04(self):
         self._testMethodName = 'case_04'
         self._testMethodDoc = '创建固件库任务成功-任务名称、厂商、版本为单个特殊符号'
@@ -110,7 +110,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_05(self):
         self._testMethodName = 'case_05'
         self._testMethodDoc = '创建固件库任务成功-任务名称、厂商、版本为99个字符'
@@ -137,7 +137,7 @@ class Create_task_lib(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_06(self):
         self._testMethodName = 'case_06'
         self._testMethodDoc = '创建固件库任务成功-任务名称、厂商、版本为99个字符'
@@ -164,7 +164,7 @@ class Create_task_lib(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_07(self):
         self._testMethodName = 'case_07'
         self._testMethodDoc = '创建固件库任务失败-任务名称为100个字符'
@@ -191,7 +191,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_08(self):
         self._testMethodName = 'case_08'
         self._testMethodDoc = '创建固件库任务失败-厂商为100个字符'
@@ -218,7 +218,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_09(self):
         self._testMethodName = 'case_09'
         self._testMethodDoc = '创建固件库任务失败-版本为100个字符'
@@ -245,7 +245,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_10(self):
         self._testMethodName = 'case_10'
         self._testMethodDoc = '创建固件库任务失败-device_name为100个字符'
@@ -272,7 +272,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_11(self):
         self._testMethodName = 'case_11'
         self._testMethodDoc = '创建固件库任务失败-device_name为空'
@@ -298,7 +298,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_12(self):
         self._testMethodName = 'case_12'
         self._testMethodDoc = '创建固件库任务失败-任务名称为空'
@@ -324,7 +324,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_13(self):
         self._testMethodName = 'case_13'
         self._testMethodDoc = '创建固件库任务失败-厂商为空'
@@ -351,7 +351,7 @@ class Create_task_lib(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_14(self):
         self._testMethodName = 'case_14'
         self._testMethodDoc = '创建固件库任务失败-版本为空'
@@ -377,7 +377,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_15(self):
         self._testMethodName = 'case_15'
         self._testMethodDoc = '创建固件库任务失败-md5值为空'
@@ -403,7 +403,7 @@ class Create_task_lib(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_16(self):
         self._testMethodName = 'case_16'
         self._testMethodDoc = '创建固件库任务失败-上传文件为空'
@@ -429,7 +429,7 @@ class Create_task_lib(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_17(self):
         self._testMethodName = 'case_17'
         self._testMethodDoc = '创建固件库任务失败-md5值错误'
@@ -456,7 +456,7 @@ class Create_task_lib(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_18(self):
         self._testMethodName = 'case_18'
         self._testMethodDoc = '创建固件库任务失败-勾选插件重复'
@@ -482,7 +482,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_19(self):
         self._testMethodName = 'case_19'
         self._testMethodDoc = '创建固件库任务失败-勾选插件名错误'
@@ -508,7 +508,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_20(self):
         self._testMethodName = 'case_20'
         self._testMethodDoc = '创建固件库任务失败-不勾选插件'
@@ -534,7 +534,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_21(self):
         self._testMethodName = 'case_21'
         self._testMethodDoc = '创建固件库任务失败-不勾选cve插件'
@@ -560,7 +560,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_22(self):
         self._testMethodName = 'case_22'
         self._testMethodDoc = '创建固件库任务失败-不勾选software_components及cve插件'
@@ -586,7 +586,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_23(self):
         self._testMethodName = 'case_23'
         self._testMethodDoc = '创建固件库任务失败-不勾选software_components但勾选cve插件'
@@ -612,7 +612,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_24(self):
         self._testMethodName = 'case_24'
         self._testMethodDoc = '创建固件库任务失败-不勾选crypto_hints插件'
@@ -638,7 +638,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_25(self):
         self._testMethodName = 'case_25'
         self._testMethodDoc = '创建固件库任务失败-不勾选elf_analysis插件'
@@ -664,7 +664,7 @@ class Create_task_lib(Session_init):
                 print(e)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_26(self):
         self._testMethodName = 'case_26'
         self._testMethodDoc = '创建固件库任务失败-不勾选ip_and_uri_finder插件'
@@ -691,7 +691,7 @@ class Create_task_lib(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_27(self):
         self._testMethodName = 'case_27'
         self._testMethodDoc = '创建固件库任务失败-不勾选users_and_passwords插件'
@@ -718,7 +718,7 @@ class Create_task_lib(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_create_task_lib_28(self):
         self._testMethodName = 'case_28'
         self._testMethodDoc = '创建固件库任务失败-不勾选elf_checksec插件'

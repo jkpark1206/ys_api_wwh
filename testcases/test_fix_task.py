@@ -10,7 +10,7 @@ from common.Random_str import Ran_str
 
 class Fix_Task_Test(Session_init):
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_01(self):
         self._testMethodName = 'case_01'
         self._testMethodDoc = "修改任务不勾选cve插件"
@@ -28,7 +28,7 @@ class Fix_Task_Test(Session_init):
         except Exception as e:
             print(e)
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_02(self):
         self._testMethodName = 'case_02'
         self._testMethodDoc = "修改任务不勾选插件"
@@ -47,7 +47,7 @@ class Fix_Task_Test(Session_init):
             print(e)
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_03(self):
         self._testMethodName = 'case_03'
         self._testMethodDoc = "修改任务插件参数为空"
@@ -66,7 +66,7 @@ class Fix_Task_Test(Session_init):
             print(e)
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_04(self):
         self._testMethodName = 'case_04'
         self._testMethodDoc = "修改任务插件未全选-关联固件库"
@@ -85,7 +85,7 @@ class Fix_Task_Test(Session_init):
             print(e)
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_05(self):
         self._testMethodName = 'case_05'
         self._testMethodDoc = "修改任务失败：task_name为100个字符"
@@ -104,7 +104,7 @@ class Fix_Task_Test(Session_init):
             print(e)
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_06(self):
         self._testMethodName = 'case_06'
         self._testMethodDoc = "修改任务失败：vendor参数长度为100"
@@ -123,7 +123,7 @@ class Fix_Task_Test(Session_init):
             print(e)
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_07(self):
         self._testMethodName = 'case_07'
         self._testMethodDoc = "修改任务失败：version为100个字符"
@@ -141,7 +141,7 @@ class Fix_Task_Test(Session_init):
         except Exception as e:
             print(e)
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_08(self):
         self._testMethodName = 'case_08'
         self._testMethodDoc = "修改任务失败：task_name为空"
@@ -160,7 +160,7 @@ class Fix_Task_Test(Session_init):
             print(e)
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_09(self):
         self._testMethodName = 'case_09'
         self._testMethodDoc = "修改任务失败：vendor为空"
@@ -179,7 +179,7 @@ class Fix_Task_Test(Session_init):
             print(e)
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_10(self):
         self._testMethodName = 'case_10'
         self._testMethodDoc = "修改任务失败：version为空"
@@ -198,7 +198,7 @@ class Fix_Task_Test(Session_init):
             print(e)
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_11(self):
         self._testMethodName = 'case_11'
         self._testMethodDoc = "修改任务失败：plugin重复"
@@ -218,7 +218,7 @@ class Fix_Task_Test(Session_init):
             print(e)
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_12(self):
         self._testMethodName = 'case_12'
         self._testMethodDoc = "修改任务失败：id为空"
@@ -235,7 +235,7 @@ class Fix_Task_Test(Session_init):
 
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_13(self):
         self._testMethodName = 'case_13'
         self._testMethodDoc = "修改任务失败：勾选cve插件/不勾选soft插件"
@@ -255,7 +255,7 @@ class Fix_Task_Test(Session_init):
             print(e)
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_14(self):
         self._testMethodName = 'case_14'
         self._testMethodDoc = "修改任务失败：勾选cve插件/不勾选soft插件"
@@ -274,7 +274,7 @@ class Fix_Task_Test(Session_init):
         except Exception as e:
             print(e)
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_15(self):
         self._testMethodName = 'case_15'
         self._testMethodDoc = "修改任务成功：勾选cve插件-关联勾选soft插件"
@@ -294,7 +294,7 @@ class Fix_Task_Test(Session_init):
             print(e)
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_16(self):
         self._testMethodName = 'case_16'
         self._testMethodDoc = "修改任务成功：99个字符，只勾选crypto_hints插件"
@@ -313,7 +313,7 @@ class Fix_Task_Test(Session_init):
         except Exception as e:
             print(e)
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_17(self):
         self._testMethodName = 'case_17'
         self._testMethodDoc = "修改任务成功：只勾选elf_analysis插件"
@@ -332,7 +332,7 @@ class Fix_Task_Test(Session_init):
         except Exception as e:
             print(e)
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_18(self):
         self._testMethodName = 'case_18'
         self._testMethodDoc = "修改任务成功：只勾选elf_checksec插件"
@@ -352,7 +352,7 @@ class Fix_Task_Test(Session_init):
             print(e)
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_19(self):
         self._testMethodName = 'case_19'
         self._testMethodDoc = "修改任务成功：只勾选sensitive_msg插件"
@@ -372,7 +372,7 @@ class Fix_Task_Test(Session_init):
             print(e)
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_Fix_task_20(self):
         self._testMethodName = 'case_20'
         self._testMethodDoc = "修改任务成功：单个特殊符号，只勾选software_components插件"

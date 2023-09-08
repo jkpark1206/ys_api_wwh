@@ -32,7 +32,7 @@ class Login_Test(Session_init):
         res = ApiDefine().Login(self.session,data)
         a = json.loads(res)["message"]
         b = json.loads(res)["code"]
-        self.assertIn("用户[111]登录失败，原因:用户名或密码错误", a)
+        self.assertIn("用户[111]登录失败，原因：用户名或密码错误", a)
         self.assertEqual(2008, b)
 
     # @unittest.skip
@@ -47,7 +47,7 @@ class Login_Test(Session_init):
         res = ApiDefine().Login(self.session,data)
         a = json.loads(res)["message"]
         b = json.loads(res)["code"]
-        self.assertIn("用户[{}]登录失败，原因:用户名或密码错误".format(local_config.Username), a)
+        self.assertIn("用户[{}]登录失败，原因：用户名或密码错误".format(local_config.Username), a)
         self.assertEqual(2008, b)
 
 

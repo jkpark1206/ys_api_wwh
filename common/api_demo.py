@@ -70,18 +70,18 @@ class ApiDefine:
 
     #开始固件任务
     def Start_task(self,session,data,headers):
-        res = session.post('{}api/task/start'.format(local_config.URL), json=data, headers=headers)
+        res = session.put('{}api/task/start'.format(local_config.URL), json=data, headers=headers)
         return res.text
 
     #暂停固件任务
     def Stop_task(self,session,data,headers):
-        res = session.post('{}api/task/stop'.format(local_config.URL) ,json=data , headers=headers)
+        res = session.put('{}api/task/stop'.format(local_config.URL) ,json=data , headers=headers)
         return res.text
 
 
     #恢复暂停中的固件任务
     def Recover_task(self,session,data,headers):
-        res = session.post('{}api/task/recover'.format(local_config.URL),json=data,headers=headers)
+        res = session.put('{}api/task/recover'.format(local_config.URL),json=data,headers=headers)
         return res.text
 
     #删除固件任务
@@ -91,7 +91,11 @@ class ApiDefine:
 
 
     #创建对比报告
-    def Compare_task(self,session,data,headers):
+    def Compare_task(self,session,f_id,s_id,headers):
+        data = {
+            "first_id": f_id,
+            "second_id": s_id
+        }
         res = session.post('{}api/compareTask/create'.format(local_config.URL),json=data,headers=headers)
         return res.text
 

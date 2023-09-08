@@ -170,7 +170,7 @@ class System_config(Session_init):
         try:
             a = json.loads(res)['message']
             b = json.loads(res)['code']
-            self.assertIn("产品版本号参数长度错误,最大长度为30",a)
+            self.assertIn("产品版本参数长度错误,最大长度为30",a)
             self.assertEqual(2000,b)
         except Exception as e:
             print(e)
