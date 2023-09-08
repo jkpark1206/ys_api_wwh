@@ -735,10 +735,7 @@ class Create_task_lib(Session_init):
         with open(local_config.all_have_path, 'rb') as firm:
             f = {'firmware': firm}
             res = ApiDefine().Create_task_lib(self.session, d, h, f)
-            try:
-                a = json.loads(res)["message"]
-                b = json.loads(res)["code"]
-                self.assertIn('插件参数不完整', a)
-                self.assertEqual(2002, b)
-            except Exception as e:
-                print(e)
+            a = json.loads(res)["message"]
+            b = json.loads(res)["code"]
+            self.assertIn('插件参数不完整', a)
+            self.assertEqual(2002, b)

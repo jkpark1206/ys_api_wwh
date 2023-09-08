@@ -23,11 +23,9 @@ class Log_system_test(Session_init):
         zipped_data = ZipFile(BytesIO(file))     #使用ZipFile将二进制流写入zipped_data中
         zipped_data.extractall(local_config.Log_system_file)    #使用extractall将zipped_data文件解压，
                                                                 # 存在local_config.Log_system_file该文件夹中，可去文件夹内查看日志内容
-        # try:
-        #     a = res.status_code
-        #     self.assertEqual(200,a)
-        # except Exception as e:
-        #     print(e)
+
+
+
 
     # @unittest.skip
     def test_log_sys_02(self):
@@ -40,13 +38,11 @@ class Log_system_test(Session_init):
             "end_time": "2023-10-07 14:46:20"
                      }
         res = ApiDefine().System_log(self.session, d, h).text  # 接口返回的内容为二进制流
-        try:
-            a = json.loads(res)["code"]
-            b = json.loads(res)["message"]
-            self.assertEqual(7009, a)
-            self.assertEqual("没有符合条件的日志文件", b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["code"]
+        b = json.loads(res)["message"]
+        self.assertEqual(7009, a)
+        self.assertEqual("没有符合条件的日志文件", b)
+
 
 
 

@@ -22,13 +22,11 @@ class Get_sys_log(Session_init):
             "end_time": "2022-09-28 14:46:31"
         }
         res = ApiDefine().Get_user_log(self.session,d,h)
-        try:
-            a = json.loads(res)["code"]
-            b = json.loads(res)["message"]
-            self.assertEqual(200,a)
-            self.assertIn("OK",b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["code"]
+        b = json.loads(res)["message"]
+        self.assertEqual(200,a)
+        self.assertIn("OK",b)
+
 
 
 

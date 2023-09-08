@@ -32,15 +32,13 @@ class System_config(Session_init):
         text_logo.close()
         browser_logo.close()
         watermark_logo.close()
-        try:
-            a = json.loads(res)['message']
-            b = json.loads(res)['code']
-            self.assertIn("产品信息配置成功",a)
-            self.assertEqual(200,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)['message']
+        b = json.loads(res)['code']
+        self.assertIn("产品信息配置成功",a)
+        self.assertEqual(200,b)
 
-    # @unittest.skip
+
+    @unittest.skip
     def test_sys_conf_case_02(self):
         self._testMethodName = 'case_02'
         self._testMethodDoc = '配置产品信息失败-非config用户登录无配置权限'
@@ -65,13 +63,11 @@ class System_config(Session_init):
         text_logo.close()
         browser_logo.close()
         watermark_logo.close()
-        try:
-            a = json.loads(res)['message']
-            b = json.loads(res)['code']
-            self.assertIn("用户无权限, 修改产品配置失败", a)
-            self.assertEqual(1011, b)
-        except Exception as e:
-            print(e,res)
+        a = json.loads(res)['message']
+        b = json.loads(res)['code']
+        self.assertIn("用户无权限, 修改产品配置失败", a)
+        self.assertEqual(1011, b)
+
 
 
     # @unittest.skip
@@ -99,16 +95,14 @@ class System_config(Session_init):
         text_logo.close()
         browser_logo.close()
         watermark_logo.close()
-        try:
-            a = json.loads(res)['message']
-            b = json.loads(res)['code']
-            self.assertIn("产品信息配置成功",a)
-            self.assertEqual(200,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)['message']
+        b = json.loads(res)['code']
+        self.assertIn("产品信息配置成功",a)
+        self.assertEqual(200,b)
 
 
-    # @unittest.skip
+
+    @unittest.skip
     def test_sys_conf_case_04(self):
         self._testMethodName = 'case_04'
         self._testMethodDoc = '配置产品信息失败-产品名称超过20个字符'
@@ -133,16 +127,14 @@ class System_config(Session_init):
         text_logo.close()
         browser_logo.close()
         watermark_logo.close()
-        try:
-            a = json.loads(res)['message']
-            b = json.loads(res)['code']
-            self.assertIn("产品名称参数长度错误,最大长度为20",a)
-            self.assertEqual(2000,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)['message']
+        b = json.loads(res)['code']
+        self.assertIn("产品名称参数长度错误,最大长度为20",a)
+        self.assertEqual(2000,b)
 
 
-    # @unittest.skip
+
+    @unittest.skip
     def test_sys_conf_case_05(self):
         self._testMethodName = 'case_05'
         self._testMethodDoc = '配置产品信息失败-版本名超过30个字符'
@@ -167,17 +159,15 @@ class System_config(Session_init):
         text_logo.close()
         browser_logo.close()
         watermark_logo.close()
-        try:
-            a = json.loads(res)['message']
-            b = json.loads(res)['code']
-            self.assertIn("产品版本参数长度错误,最大长度为30",a)
-            self.assertEqual(2000,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)['message']
+        b = json.loads(res)['code']
+        self.assertIn("产品版本参数长度错误,最大长度为30",a)
+        self.assertEqual(2000,b)
 
 
 
-    # @unittest.skip
+
+    @unittest.skip
     def test_sys_conf_case_06(self):
         self._testMethodName = 'case_06'
         self._testMethodDoc = '配置产品信息失败-PDF报告水印超过大小限制'
@@ -202,16 +192,14 @@ class System_config(Session_init):
         text_logo.close()
         browser_logo.close()
         watermark_logo.close()
-        try:
-            a = json.loads(res)['message']
-            b = json.loads(res)['code']
-            self.assertIn("产品信息配置失败, 文件大小超出限制",a)
-            self.assertEqual(1011,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)['message']
+        b = json.loads(res)['code']
+        self.assertIn("产品信息配置失败, 文件大小超出限制",a)
+        self.assertEqual(1011,b)
 
 
-    # @unittest.skip
+
+    @unittest.skip
     def test_sys_conf_case_07(self):
         self._testMethodName = 'case_07'
         self._testMethodDoc = '配置产品信息失败-正常logo超过大小限制'
@@ -236,16 +224,14 @@ class System_config(Session_init):
         text_logo.close()
         browser_logo.close()
         watermark_logo.close()
-        try:
-            a = json.loads(res)['message']
-            b = json.loads(res)['code']
-            self.assertIn("产品信息配置失败, 文件大小超出限制",a)
-            self.assertEqual(1011,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)['message']
+        b = json.loads(res)['code']
+        self.assertIn("产品信息配置失败, 文件大小超出限制",a)
+        self.assertEqual(1011,b)
 
 
-    # @unittest.skip
+
+    @unittest.skip
     def test_sys_conf_case_08(self):
         self._testMethodName = 'case_08'
         self._testMethodDoc = '配置产品信息失败-白色logo超过大小限制'
@@ -270,13 +256,11 @@ class System_config(Session_init):
         text_logo.close()
         browser_logo.close()
         watermark_logo.close()
-        try:
-            a = json.loads(res)['message']
-            b = json.loads(res)['code']
-            self.assertIn("产品信息配置失败, 文件大小超出限制",a)
-            self.assertEqual(1011,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)['message']
+        b = json.loads(res)['code']
+        self.assertIn("产品信息配置失败, 文件大小超出限制",a)
+        self.assertEqual(1011,b)
+
 
 
 

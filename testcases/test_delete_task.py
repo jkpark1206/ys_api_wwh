@@ -133,15 +133,13 @@ class Delete_task_test(Session_init):
         d3 = {"task_id_list": [task_id],
                   "skip_task_lib": False}
         res = ApiDefine().Delete_task(self.session, d3, h)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            c = json.loads(res)["data"]["fail"][0]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-            self.assertIn('扫描任务:{}处于队列中,不可删除'.format(task_name),c)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        c = json.loads(res)["data"]["fail"][0]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+        self.assertIn('扫描任务:{}处于队列中,不可删除'.format(task_name),c)
+
 
 
     # @unittest.SkipTest

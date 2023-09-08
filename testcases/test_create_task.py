@@ -20,13 +20,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": token}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                         local_config.Plugin_All, file_md5, "false", h, local_config.all_have_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertIs(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertIs(200, b)
+
 
     # @unittest.skip
     def test_creat_task_02(self):
@@ -38,13 +36,11 @@ class Create_Task_Test(Session_init):
         file_md5 = Get_file_md5(os.path.join(local_config.all_have_link_path))  #根据固件路径获取md5值
         res = ApiDefine().Create_task_2(self.session,task_name,task_name,Ran_str(1),Ran_str(1),
                                         local_config.Plugin_All,file_md5,"true", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertIs(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertIs(200, b)
+
 
     # @unittest.skip
     def test_creat_task_03(self):
@@ -56,13 +52,12 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": token}
         res = ApiDefine().Create_task_2(self.session,task_name,'',Ran_str(1),Ran_str(1),
                                         local_config.Plugin_All,file_md5,"true", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("缺少task_name 参数", a)
-            self.assertEqual(2001, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("缺少task_name 参数", a)
+        self.assertEqual(2001, b)
+
+
 
     # @unittest.skip
     def test_creat_task_04(self):
@@ -74,13 +69,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": token}
         res = ApiDefine().Create_task_2(self.session,task_name,task_name,'',Ran_str(1),
                                     local_config.Plugin_All,file_md5,"true", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("缺少vendor 参数", a)
-            self.assertEqual(2001, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("缺少vendor 参数", a)
+        self.assertEqual(2001, b)
+
 
 
     # @unittest.skip
@@ -93,13 +86,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": token}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), '',
                                   local_config.Plugin_All, file_md5, "true", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("缺少version 参数", a)
-            self.assertEqual(2001, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("缺少version 参数", a)
+        self.assertEqual(2001, b)
+
 
 
     # @unittest.skip
@@ -112,13 +103,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": token}
         res = ApiDefine().Create_task_2(self.session, '', task_name, Ran_str(1), Ran_str(1),
                                   local_config.Plugin_All, file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("缺少device_name 参数", a)
-            self.assertEqual(2001, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("缺少device_name 参数", a)
+        self.assertEqual(2001, b)
+
 
 
     # @unittest.skip
@@ -130,13 +119,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": token}
         res = ApiDefine().Create_task_2(self.session,1,1,1,1,
                                         local_config.Plugin_All,file_md5,"false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
     # @unittest.skip
     def test_creat_task_08(self):
@@ -147,13 +134,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": token}
         res = ApiDefine().Create_task_2(self.session,'a','a','a','a',
                                         local_config.Plugin_All,file_md5,"false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
 
     # @unittest.skip
@@ -165,13 +150,12 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": token}
         res = ApiDefine().Create_task_2(self.session,'*','*','*','*',
                                         local_config.Plugin_All,file_md5,"false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
+
 
     # @unittest.skip
     def test_creat_task_10(self):
@@ -181,13 +165,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, Ran_str(99), Ran_str(99), Ran_str(99), Ran_str(99),
                                         local_config.Plugin_All, file_md5, "false", h, local_config.maxstr_task_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
 
     # @unittest.skip
@@ -199,13 +181,12 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, task_name, Ran_str(100), Ran_str(1), Ran_str(1),
                                         local_config.Plugin_All, file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("task_name参数长度超过100限制", a)
-            self.assertEqual(2002, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("task_name参数长度超过100限制", a)
+        self.assertEqual(2002, b)
+
+
 
     # @unittest.skip
     def test_creat_task_12(self):
@@ -216,13 +197,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(100),
                                         local_config.Plugin_All, file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("version参数长度超过100限制", a)
-            self.assertEqual(2002, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("version参数长度超过100限制", a)
+        self.assertEqual(2002, b)
+
 
     # @unittest.skip
     def test_creat_task_13(self):
@@ -233,13 +212,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res =  ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(100), Ran_str(1),
                                         local_config.Plugin_All, file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("vendor参数长度超过100限制", a)
-            self.assertEqual(2002, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("vendor参数长度超过100限制", a)
+        self.assertEqual(2002, b)
+
 
 
     # @unittest.skip
@@ -251,13 +228,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, Ran_str(100), task_name, Ran_str(1), Ran_str(1),
                                         local_config.Plugin_All, file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("device_name参数长度超过100限制", a)
-            self.assertEqual(2002, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("device_name参数长度超过100限制", a)
+        self.assertEqual(2002, b)
+
 
 
     # @unittest.skip
@@ -270,13 +245,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": token}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                         local_config.Plugin_All, file_md5, "false", h, local_config.overstr_task_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("任务文件名超出最大长度:99", a)
-            self.assertEqual(2005, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("任务文件名超出最大长度:99", a)
+        self.assertEqual(2005, b)
+
 
     # @unittest.skip
     def test_creat_task_16(self):
@@ -287,13 +260,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": token}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                         local_config.Plugin_All, '', "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("file_md5参数内容为空", a)
-            self.assertEqual(2001, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("file_md5参数内容为空", a)
+        self.assertEqual(2001, b)
+
 
 
     # @unittest.skip
@@ -305,13 +276,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": token}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                         local_config.Plugin_All, 123, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("file_md5参数内容不符合要求", a)
-            self.assertEqual(2005, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("file_md5参数内容不符合要求", a)
+        self.assertEqual(2005, b)
+
 
 
     # @unittest.skip
@@ -323,13 +292,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                         local_config.Plugin_All, 'ddc56d45ea7fc06a2684f589dadb4d29', "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("上传的固件{}不完整".format(firm_name), a)
-            self.assertEqual(5004, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("上传的固件{}不完整".format(firm_name), a)
+        self.assertEqual(5004, b)
+
 
 
     # @unittest.skip
@@ -341,13 +308,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                         '''["cwe_checker","cwe_checker"]''', file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("plugin参数里面有重复内容", a)
-            self.assertEqual(2002, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("plugin参数里面有重复内容", a)
+        self.assertEqual(2002, b)
+
 
 
 
@@ -360,13 +325,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                         '', file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("plugin参数格式错误", a)
-            self.assertEqual(6002, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("plugin参数格式错误", a)
+        self.assertEqual(6002, b)
+
 
 
     # @unittest.skip
@@ -378,13 +341,10 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                         '''[]''', file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("缺少 plugin 参数", a)
-            self.assertEqual(6001, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("缺少 plugin 参数", a)
+        self.assertEqual(6001, b)
 
 
     # @unittest.skip
@@ -401,13 +361,11 @@ class Create_Task_Test(Session_init):
              "plugin": local_config.Plugin_All,
              "file_md5": file_md5}
         res = ApiDefine().Create_task(self.session, d, h, '')
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("缺少固件", a)
-            self.assertEqual(5001, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("缺少固件", a)
+        self.assertEqual(5001, b)
+
 
 
     # @unittest.skip
@@ -419,13 +377,10 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                     '''["cwe_checker"]''', file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
 
 
     # @unittest.skip
@@ -437,13 +392,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                     '''["software_components"]''', file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
 
 
@@ -456,13 +409,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                     '''["cve_lookup","software_components"]''', file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
 
 
@@ -475,13 +426,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                     '''["cve_lookup"]''', file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("插件cve_lookup缺少依赖software_components", a)
-            self.assertEqual(2002, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("插件cve_lookup缺少依赖software_components", a)
+        self.assertEqual(2002, b)
+
 
 
     # @unittest.skip
@@ -493,13 +442,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                     '''["crypto_hints"]''', file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
 
     # @unittest.skip
@@ -511,13 +458,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                     '''["elf_analysis"]''', file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
 
 
@@ -530,13 +475,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                     '''["sensitive_msg"]''', file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
 
 
@@ -549,13 +492,11 @@ class Create_Task_Test(Session_init):
         h = {"Authorization": Token()}
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                     '''["elf_checksec"]''', file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
 
 
@@ -569,13 +510,11 @@ class Create_Task_Test(Session_init):
         plugin='''["cwe_checker","software_components","cve_lookup","crypto_hints","elf_analysis","sensitive_msg"]'''
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                     plugin, file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
 
 
@@ -589,13 +528,11 @@ class Create_Task_Test(Session_init):
         plugin ='''["cwe_checker","software_components","cve_lookup","crypto_hints","elf_analysis","elf_checksec"]'''
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                     plugin, file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
 
 
@@ -609,13 +546,11 @@ class Create_Task_Test(Session_init):
         plugin = '''["cwe_checker","software_components","cve_lookup","crypto_hints","sensitive_msg","elf_checksec"]'''
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                     plugin, file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
 
 
@@ -629,13 +564,11 @@ class Create_Task_Test(Session_init):
         plugin = '''["cwe_checker","software_components","cve_lookup","elf_analysis","sensitive_msg","elf_checksec"]'''
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                     plugin, file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
 
 
@@ -649,13 +582,11 @@ class Create_Task_Test(Session_init):
         plugin='''["cwe_checker","software_components","crypto_hints","elf_analysis","sensitive_msg","elf_checksec"]'''
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                     plugin, file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
 
 
@@ -669,12 +600,10 @@ class Create_Task_Test(Session_init):
         plugin = '''["cwe_checker","crypto_hints","elf_analysis","sensitive_msg","elf_checksec"]'''
         res = ApiDefine().Create_task_2(self.session, task_name, task_name, Ran_str(1), Ran_str(1),
                                     plugin, file_md5, "false", h, local_config.all_have_link_path)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200, b)
+
 
 

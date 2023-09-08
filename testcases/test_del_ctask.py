@@ -39,15 +39,13 @@ class Del_compare_task(Session_init):
         task_id_2 = OperationpostgresBase().Get_Compare_Task()[1][0]
         d = {"task_id_list":[task_id_1,task_id_2]}
         res = ApiDefine().Del_compare_task(self.session,d,h)
-        try:
-            a = json.loads(res)["message"]
-            b = json.loads(res)["code"]
-            c = json.loads(res)["data"]["success"][0]
-            self.assertIn('OK',a)
-            self.assertEqual(200,b)
-            self.assertIn('成功',c)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["message"]
+        b = json.loads(res)["code"]
+        c = json.loads(res)["data"]["success"][0]
+        self.assertIn('OK',a)
+        self.assertEqual(200,b)
+        self.assertIn('成功',c)
+
 
 
     # @unittest.skip

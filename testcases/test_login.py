@@ -5,6 +5,7 @@ from config.config import local_config
 import json
 
 class Login_Test(Session_init):
+
     # @unittest.SkipTest
     def testcase_login_01(self):
         self._testMethodName = 'case_01'

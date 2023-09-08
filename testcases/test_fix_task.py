@@ -20,13 +20,12 @@ class Fix_Task_Test(Session_init):
         res = ApiDefine().Create_task_2(self.session,task_name,task_name,'all','all',local_config.Plugin_All,file_md5,'false', h, local_config.all_have_path)
         id = json.loads(res)["data"]["id"]
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,'all','all',local_config.Plugin_Cve0,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("OK", a)
-            self.assertIs(200, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("OK", a)
+        self.assertIs(200, b)
+
+
 
     # @unittest.skip
     def test_Fix_task_02(self):
@@ -38,13 +37,11 @@ class Fix_Task_Test(Session_init):
         res = ApiDefine().Create_task_2(self.session,task_name,task_name,'all','all',local_config.Plugin_All,file_md5,'false', h, local_config.all_have_path)
         id = json.loads(res)["data"]["id"]
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,'all','all',local_config.Plugin0,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("缺少 plugin 参数", a)
-            self.assertEqual(6001,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("缺少 plugin 参数", a)
+        self.assertEqual(6001,b)
+
 
 
     # @unittest.skip
@@ -57,13 +54,11 @@ class Fix_Task_Test(Session_init):
         res = ApiDefine().Create_task_2(self.session,task_name,task_name,'all','all',local_config.Plugin_All,file_md5,'false', h, local_config.all_have_path)
         id = json.loads(res)["data"]["id"]
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,'all','all','','false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("plugin参数格式错误", a)
-            self.assertEqual(6002,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("plugin参数格式错误", a)
+        self.assertEqual(6002,b)
+
 
 
     # @unittest.skip
@@ -76,13 +71,11 @@ class Fix_Task_Test(Session_init):
         res = ApiDefine().Create_task_2(self.session,task_name,task_name,'all','all',local_config.Plugin_All,file_md5,'false', h, local_config.all_have_path)
         id = json.loads(res)["data"]["id"]
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,'a','a',local_config.Plugin_Cve0,'true',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("当前所选插件不完整", a)
-            self.assertEqual(6001,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("当前所选插件不完整", a)
+        self.assertEqual(6001,b)
+
 
 
     # @unittest.skip
@@ -95,13 +88,11 @@ class Fix_Task_Test(Session_init):
         res = ApiDefine().Create_task_2(self.session,task_name,task_name,'all','all',local_config.Plugin_All,file_md5,'false', h, local_config.all_have_path)
         id = json.loads(res)["data"]["id"]
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,Ran_str(100),'a','a',local_config.Plugin_Cve0,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("task_name参数长度超过100限制", a)
-            self.assertEqual(2002,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("task_name参数长度超过100限制", a)
+        self.assertEqual(2002,b)
+
 
 
     # @unittest.skip
@@ -114,13 +105,11 @@ class Fix_Task_Test(Session_init):
         res = ApiDefine().Create_task_2(self.session,task_name,task_name,'all','all',local_config.Plugin_All,file_md5,'false', h, local_config.all_have_path)
         id = json.loads(res)["data"]["id"]
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,Ran_str(100),'a',local_config.Plugin_Cve0,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("vendor参数长度超过100限制", a)
-            self.assertEqual(2002,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("vendor参数长度超过100限制", a)
+        self.assertEqual(2002,b)
+
 
 
     # @unittest.skip
@@ -133,13 +122,12 @@ class Fix_Task_Test(Session_init):
         res = ApiDefine().Create_task_2(self.session,task_name,task_name,'all','all',local_config.Plugin_All,file_md5,'false', h, local_config.all_have_path)
         id = json.loads(res)["data"]["id"]
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,Ran_str(1),Ran_str(100),local_config.Plugin_Cve0,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("version参数长度超过100限制", a)
-            self.assertEqual(2002,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("version参数长度超过100限制", a)
+        self.assertEqual(2002,b)
+
+
 
     # @unittest.skip
     def test_Fix_task_08(self):
@@ -151,13 +139,11 @@ class Fix_Task_Test(Session_init):
         res = ApiDefine().Create_task_2(self.session,task_name,task_name,'all','all',local_config.Plugin_All,file_md5,'false', h, local_config.all_have_path)
         id = json.loads(res)["data"]["id"]
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,'',Ran_str(1),Ran_str(1),local_config.Plugin_Cve0,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("缺少task_name 参数", a)
-            self.assertEqual(2001,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("缺少task_name 参数", a)
+        self.assertEqual(2001,b)
+
 
 
     # @unittest.skip
@@ -170,13 +156,11 @@ class Fix_Task_Test(Session_init):
         res = ApiDefine().Create_task_2(self.session,task_name,task_name,'all','all',local_config.Plugin_All,file_md5,'false', h, local_config.all_have_path)
         id = json.loads(res)["data"]["id"]
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,'',Ran_str(1),local_config.Plugin_Cve0,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("缺少vendor 参数", a)
-            self.assertEqual(2001,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("缺少vendor 参数", a)
+        self.assertEqual(2001,b)
+
 
 
     # @unittest.skip
@@ -189,13 +173,11 @@ class Fix_Task_Test(Session_init):
         res = ApiDefine().Create_task_2(self.session,task_name,task_name,'all','all',local_config.Plugin_All,file_md5,'false', h, local_config.all_have_path)
         id = json.loads(res)["data"]["id"]
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,'',Ran_str(1),local_config.Plugin_Cve0,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("缺少vendor 参数", a)
-            self.assertEqual(2001,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("缺少vendor 参数", a)
+        self.assertEqual(2001,b)
+
 
 
     # @unittest.skip
@@ -209,13 +191,11 @@ class Fix_Task_Test(Session_init):
         id = json.loads(res)["data"]["id"]
         plugin = '''["cwe_checker","software_components","crypto_hints","cwe_checker"]'''
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,Ran_str(1),Ran_str(1),plugin,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("plugin参数里面有重复内容", a)
-            self.assertEqual(2002,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("plugin参数里面有重复内容", a)
+        self.assertEqual(2002,b)
+
 
 
     # @unittest.skip
@@ -225,13 +205,11 @@ class Fix_Task_Test(Session_init):
         task_name = '自动化测试'
         h = {"Authorization": Token()}
         res_2 = ApiDefine().Fix_task(self.session, '', task_name, task_name, Ran_str(1), Ran_str(1), local_config.Plugin_Cve0, 'false', h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("参数类型错误！", a)
-            self.assertEqual(2002, b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("参数类型错误！", a)
+        self.assertEqual(2002, b)
+
 
 
 
@@ -246,13 +224,11 @@ class Fix_Task_Test(Session_init):
         id = json.loads(res)["data"]["id"]
         plugin = '''["cve_lookup"]'''
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,Ran_str(1),Ran_str(1),plugin,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("插件cve_lookup缺少依赖['software_components', 'homology']", a)
-            self.assertEqual(2002,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("插件cve_lookup缺少依赖['software_components', 'homology']", a)
+        self.assertEqual(2002,b)
+
 
 
     # @unittest.skip
@@ -266,13 +242,12 @@ class Fix_Task_Test(Session_init):
         id = json.loads(res)["data"]["id"]
         plugin = '''["cve_lookup"]'''
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,Ran_str(1),Ran_str(1),plugin,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("插件cve_lookup缺少依赖['software_components', 'homology']", a)
-            self.assertEqual(2002,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("插件cve_lookup缺少依赖['software_components', 'homology']", a)
+        self.assertEqual(2002,b)
+
+
 
     # @unittest.skip
     def test_Fix_task_15(self):
@@ -285,13 +260,11 @@ class Fix_Task_Test(Session_init):
         id = json.loads(res)["data"]["id"]
         plugin = '''["software_components","cve_lookup"]'''
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,Ran_str(1),Ran_str(1),plugin,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200,b)
+
 
 
     # @unittest.skip
@@ -305,13 +278,12 @@ class Fix_Task_Test(Session_init):
         id = json.loads(res)["data"]["id"]
         plugin = '''["crypto_hints"]'''
         res_2 = ApiDefine().Fix_task(self.session,id,Ran_str(99),Ran_str(99),Ran_str(99),Ran_str(99),plugin,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200,b)
+
+
 
     # @unittest.skip
     def test_Fix_task_17(self):
@@ -324,13 +296,12 @@ class Fix_Task_Test(Session_init):
         id = json.loads(res)["data"]["id"]
         plugin = '''["elf_analysis"]'''
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,Ran_str(1),Ran_str(1),plugin,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200,b)
+
+
 
     # @unittest.skip
     def test_Fix_task_18(self):
@@ -343,13 +314,11 @@ class Fix_Task_Test(Session_init):
         id = json.loads(res)["data"]["id"]
         plugin = '''["elf_checksec"]'''
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,Ran_str(1),Ran_str(1),plugin,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200,b)
+
 
 
     # @unittest.skip
@@ -363,13 +332,11 @@ class Fix_Task_Test(Session_init):
         id = json.loads(res)["data"]["id"]
         plugin = '''["sensitive_msg"]'''
         res_2 = ApiDefine().Fix_task(self.session,id,task_name,task_name,Ran_str(1),Ran_str(1),plugin,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200,b)
+
 
 
     # @unittest.skip
@@ -383,11 +350,9 @@ class Fix_Task_Test(Session_init):
         id = json.loads(res)["data"]["id"]
         plugin = '''["software_components"]'''
         res_2 = ApiDefine().Fix_task(self.session,id,"*","*","*","*",plugin,'false',h)
-        try:
-            a = json.loads(res_2)["message"]
-            b = json.loads(res_2)["code"]
-            self.assertIn("OK", a)
-            self.assertEqual(200,b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res_2)["message"]
+        b = json.loads(res_2)["code"]
+        self.assertIn("OK", a)
+        self.assertEqual(200,b)
+
 
