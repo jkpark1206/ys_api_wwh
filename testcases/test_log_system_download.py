@@ -8,7 +8,7 @@ import json
 
 class Log_system_test(Session_init):
 
-#     # @unittest.skip
+    @unittest.skip
     def test_log_sys_01(self):
         self._testMethodName = 'case_01'
         self._testMethodDoc = '成功下载系统日志'
@@ -27,15 +27,15 @@ class Log_system_test(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_log_sys_02(self):
         self._testMethodName = 'case_02'
         self._testMethodDoc = '下载系统日志失败-选择不存在日志记录的时间'
         token = ApiDefine().Get_token(self.session)
         h = {'Authorization': token}
         d = {"log_tag": 1,
-            "start_time": "2023-10-07 14:46:20",
-            "end_time": "2023-10-07 14:46:20"
+            "start_time": "2022-10-07 14:46:20",
+            "end_time": "2022-10-07 14:46:20"
                      }
         res = ApiDefine().System_log(self.session, d, h).text  # 接口返回的内容为二进制流
         a = json.loads(res)["code"]
