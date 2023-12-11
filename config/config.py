@@ -175,6 +175,35 @@ class config:
         return os.path.dirname(self.parent_path)+'\\Logo_file\\超大PNG图片.png'
 
 
+    @property
+    def plugin_cwe(self):
+        return '["cwe"]'
+
+    @property
+    def plugin_cve(self):
+        return '["cve"]'
+
+    @property
+    def plugin_cve_soft(self):
+        return '["soft","cve"]'
+
+    @property
+    def plugin_soft(self):
+        return '["soft"]'
+
+    @property
+    def plugin_sensitive_msg(self):
+        return '["sensitive_msg"]'
+
+
+    @property
+    def plugin_security(self):
+        return '["security"]'
+
+    @property
+    def plugin_all(self):
+        return '["soft", "cve", "cwe", "security", "sensitive_msg"]'
+
 
 local_config = config()
 

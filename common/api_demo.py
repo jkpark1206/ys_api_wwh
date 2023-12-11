@@ -1,3 +1,5 @@
+import time
+
 import requests
 from config.config import local_config
 from jsonpath import jsonpath
@@ -145,10 +147,12 @@ class ApiDefine:
         res = session.post('{}api/log/exportfile'.format(local_config.URL),json=data,headers=headers)
         return res   #返回接口的二进制流，数据在二进制流内
 
+
     #获取用户日志
     def Get_user_log(self,session,data,headers):
         res = session.post('{}api/log/userlist'.format(local_config.URL), json=data, headers=headers)
         return res.text
+
 
     #获取config用户的登录token
     def Get_config_token(self,session):
@@ -165,6 +169,65 @@ class ApiDefine:
     def System_config(self,session,headers,data,files):
         res = session.post('{}api/system/config'.format(local_config.URL), headers=headers, data=data,files=files)
         return res.text
+
+
+    #创建分析策略
+    def Analysis_strategy(self,session,headers,name, lib_tag, plugin_list, cvss_info, default_tag):
+        time.sleep(4)
+        d = {"name": name,
+             "lib_tag": lib_tag,
+             "plugin_list": plugin_list,
+             "cvss_info": cvss_info,
+             "default_tag": default_tag}
+        res = session.post('{}api/strategy/create/update'.format(local_config.URL), headers=headers, json=d)
+        return res.text
+
+
+    #获取分析策略列表
+    def Get_strategy_list(self,session,headers):
+        res = session.get('{}api/strategy/list'.format(local_config.URL),headers=headers)
+        return res.text
+
+
+
+    #修改分析策略
+    def Fix_strategy(self,session,headers,name,lib_tag,cvss_info,default_tag,plugin_list,strategy_id):
+        time.sleep(4)
+        d = {
+            "name": name,
+            "lib_tag": lib_tag,
+            "cvss_info": cvss_info,
+            "default_tag": default_tag,
+            "plugin_list":plugin_list,
+            "strategy_id":strategy_id
+        }
+        res = session.put('{}api/strategy/create/update'.format(local_config.URL), headers=headers, json=d)
+        return res.text
+
+
+    #创建固件扫描分析任务
+    def Create_Firmware_Task(self, session, headers, s_id, file_md5, filepath):
+        d = {
+            "strategy_id":s_id,
+            "file_md5": file_md5
+             }
+        with open(filepath, 'rb') as firm:
+            f = {'firmware': firm}
+            res = session.post('{}api/task/create'.format(local_config.URL), headers=headers, data=d ,files=f)
+        return res.text
+
+
+    #修改固件扫描分析任务
+    def Repair_Firmware_Task(self, session, headers, task_id, s_id, task_name):
+        time.sleep(2)
+        d = {
+            "task_id":task_id,
+            "strategy_id": s_id,
+            "task_name":task_name
+             }
+        res = session.put('{}api/task/create'.format(local_config.URL), headers=headers, data=d)
+        return res.text
+
 
 
 
