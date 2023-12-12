@@ -7,8 +7,13 @@ from jsonpath import jsonpath
 class ApiDefine:
 
     #登录
-    def Login(self,session,data):
+    def Login(self,session,username,password,anban_password):
         headers = {"Content-Type": "application/json"}
+        data = {
+            "username": username,
+            "password": password,
+            "anban_password": anban_password
+        }
         res = session.post('{}api/user/login'.format(local_config.URL),json=data,headers=headers)
         return res.text
 
@@ -71,24 +76,30 @@ class ApiDefine:
         return res.text
 
     #开始固件任务
-    def Start_task(self,session,data,headers):
-        res = session.put('{}api/task/start'.format(local_config.URL), json=data, headers=headers)
+    def Start_task(self,session,headers,task_id):
+        d = {'task_id':task_id}
+        res = session.put('{}api/task/start'.format(local_config.URL), json=d, headers=headers)
         return res.text
 
+
     #暂停固件任务
-    def Stop_task(self,session,data,headers):
-        res = session.put('{}api/task/stop'.format(local_config.URL) ,json=data , headers=headers)
+    def Stop_task(self,session,headers,task_id):
+        d = {'task_id':task_id}
+        res = session.put('{}api/task/stop'.format(local_config.URL) ,headers=headers, json=d)
         return res.text
 
 
     #恢复暂停中的固件任务
-    def Recover_task(self,session,data,headers):
-        res = session.put('{}api/task/recover'.format(local_config.URL),json=data,headers=headers)
+    def Recover_task(self,session,headers,task_id):
+        d = {'task_id':task_id}
+        res = session.put('{}api/task/recover'.format(local_config.URL),headers=headers,json=d)
         return res.text
 
     #删除固件任务
-    def Delete_task(self,session,data,headers):
-        res = session.delete('{}api/task/delete'.format(local_config.URL),json=data,headers=headers)
+    def Delete_task(self,session,headers,task_id_list,skip_task_lib):
+        d = {"task_id_list":task_id_list,
+                "skip_task_lib":skip_task_lib}
+        res = session.delete('{}api/task/delete'.format(local_config.URL),headers=headers,json=d)
         return res.text
 
 
@@ -138,7 +149,7 @@ class ApiDefine:
 
     #获取系统日志
     def Get_sys_log(self,session,data,headers):
-        res = session.post('{}api/log/systemlist'.format(local_config.URL), json=data, headers=headers)
+        res = session.get('{}api/log/systemlist'.format(local_config.URL), json=data, headers=headers)
         return res.text
 
 
@@ -150,7 +161,7 @@ class ApiDefine:
 
     #获取用户日志
     def Get_user_log(self,session,data,headers):
-        res = session.post('{}api/log/userlist'.format(local_config.URL), json=data, headers=headers)
+        res = session.get('{}api/log/userlist'.format(local_config.URL), json=data, headers=headers)
         return res.text
 
 
@@ -167,6 +178,7 @@ class ApiDefine:
 
     #配置产品信息
     def System_config(self,session,headers,data,files):
+        time.sleep(5)
         res = session.post('{}api/system/config'.format(local_config.URL), headers=headers, data=data,files=files)
         return res.text
 
@@ -207,6 +219,7 @@ class ApiDefine:
 
     #创建固件扫描分析任务
     def Create_Firmware_Task(self, session, headers, s_id, file_md5, filepath):
+        time.sleep(2)
         d = {
             "strategy_id":s_id,
             "file_md5": file_md5

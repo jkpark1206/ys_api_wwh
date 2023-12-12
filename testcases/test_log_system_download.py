@@ -8,7 +8,7 @@ import json
 
 class Log_system_test(Session_init):
 
-    @unittest.skip
+    # @unittest.skip
     def test_log_sys_01(self):
         self._testMethodName = 'case_01'
         self._testMethodDoc = '成功下载系统日志'
@@ -27,7 +27,7 @@ class Log_system_test(Session_init):
 
 
 
-    @unittest.skip
+    # @unittest.skip
     def test_log_sys_02(self):
         self._testMethodName = 'case_02'
         self._testMethodDoc = '下载系统日志失败-选择不存在日志记录的时间'
@@ -42,9 +42,5 @@ class Log_system_test(Session_init):
         b = json.loads(res)["message"]
         self.assertEqual(7009, a)
         self.assertEqual("没有符合条件的日志文件", b)
-
-
-
-
 
 

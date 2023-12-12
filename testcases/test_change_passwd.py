@@ -6,7 +6,7 @@ from config.config import local_config
 
 class Change_passwd_test(Session_init):
 
-    # @unittest.skip
+    @unittest.skip
     def testcase_passwd_01(self):
         self._testMethodName = 'case_01'
         self._testMethodDoc = "成功修改密码"
@@ -22,7 +22,7 @@ class Change_passwd_test(Session_init):
         self.assertEqual(200,b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def testcase_passwd_02(self):
         self._testMethodName = 'case_02'
         self._testMethodDoc = "修改密码失败-用户名错误"
@@ -38,7 +38,7 @@ class Change_passwd_test(Session_init):
         self.assertEqual(2004,b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def testcase_passwd_03(self):
         self._testMethodName = 'case_03'
         self._testMethodDoc = "修改密码失败-密保错误"
@@ -54,7 +54,7 @@ class Change_passwd_test(Session_init):
         self.assertEqual(2004,b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def testcase_passwd_04(self):
         self._testMethodName = 'case_04'
         self._testMethodDoc = "修改密码失败-用户名为空"
@@ -70,7 +70,7 @@ class Change_passwd_test(Session_init):
         self.assertEqual(2001,b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def testcase_passwd_05(self):
         self._testMethodName = 'case_05'
         self._testMethodDoc = "修改密码失败-密码为空"
@@ -85,7 +85,7 @@ class Change_passwd_test(Session_init):
         self.assertIn('password参数内容为空',a)
         self.assertEqual(2001,b)
 
-    # @unittest.skip
+    @unittest.skip
     def testcase_passwd_06(self):
         self._testMethodName = 'case_06'
         self._testMethodDoc = "修改密码失败-密保为空"

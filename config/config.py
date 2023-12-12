@@ -9,7 +9,7 @@ class config:
 # 配置URL地址
     @property
     def URL(self):
-        return 'http://192.168.1.186:8011/'
+        return 'http://192.168.5.120:8011/'
 
 # 配置用户登录名、密码
     @property
@@ -18,11 +18,11 @@ class config:
 
     @property
     def Passwd(self):
-        return '126cfbcd4d16ae6d25c9bfcae76d8ee4'
+        return 'fcea920f7412b5da7be0cf42b8c93759'
 
     @property
     def Anban_Passwd(self):
-        return '6b5c557da96612408d2844af0d9f5e5d'
+        return 'f169d2236b9ba09a2ceb8a5c03581d41'
 
 #密保密码
     @property
@@ -33,7 +33,7 @@ class config:
 #配置连接数据库相关信息
     @property
     def host(self):
-        return '192.168.1.186'
+        return '192.168.5.120'
 
     @property
     def port(self):
@@ -99,7 +99,7 @@ class config:
 #不可用固件
     @property
     def unavailable_task_path(self):
-        return os.path.dirname(self.parent_path) + '\\firmware\\测试固件\\dsp.ko'
+        return os.path.dirname(self.parent_path) + '\\firmware\\测试固件\\miwifi_r1cl_firmware_1b415_2.12.9.bin_20231208.pdf'
 
 # 65个字符固件
     @property
