@@ -9,7 +9,7 @@ class config:
 # 配置URL地址
     @property
     def URL(self):
-        return 'http://192.168.5.120:8011/'
+        return 'http://192.168.5.242:8011/'
 
 # 配置用户登录名、密码
     @property
@@ -18,11 +18,11 @@ class config:
 
     @property
     def Passwd(self):
-        return 'fcea920f7412b5da7be0cf42b8c93759'
+        return '126cfbcd4d16ae6d25c9bfcae76d8ee4'
 
     @property
     def Anban_Passwd(self):
-        return 'f169d2236b9ba09a2ceb8a5c03581d41'
+        return '6b5c557da96612408d2844af0d9f5e5d'
 
 #密保密码
     @property
@@ -33,7 +33,7 @@ class config:
 #配置连接数据库相关信息
     @property
     def host(self):
-        return '192.168.5.120'
+        return '192.168.5.242'
 
     @property
     def port(self):
