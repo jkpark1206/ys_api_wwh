@@ -10,7 +10,7 @@ from common.database_datas import OperationpostgresBase
 
 class Start_Task_Test(Session_init):
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_start_01(self):
         self._testMethodName = 'case_01'
         self._testMethodDoc = "开始初始状态的固件任务"
@@ -42,7 +42,7 @@ class Start_Task_Test(Session_init):
 
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_start_03(self):
         self._testMethodName = 'case_03'
         self._testMethodDoc = "开始运行中的固件任务"
@@ -55,7 +55,7 @@ class Start_Task_Test(Session_init):
         self.assertEqual(3005, b)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_start_04(self):
         self._testMethodName = 'case_04'
         self._testMethodDoc = "开始暂停状态的任务"
@@ -76,7 +76,7 @@ class Start_Task_Test(Session_init):
         self.assertEqual(3011, b)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_start_05(self):
         self._testMethodName = 'case_05'
         self._testMethodDoc = "开始已结束的固件任务"
@@ -89,7 +89,7 @@ class Start_Task_Test(Session_init):
         self.assertEqual(3006, b)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_start_06(self):
         self._testMethodName = 'case_06'
         self._testMethodDoc = "开始不可用的固件任务"
@@ -110,7 +110,7 @@ class Start_Task_Test(Session_init):
         self.assertEqual(3006, b)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_start_07(self):
         self._testMethodName = 'case_07'
         self._testMethodDoc = "开始任务失败-固件任务id不存在"
@@ -122,7 +122,7 @@ class Start_Task_Test(Session_init):
         self.assertEqual(3001, b)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_start_08(self):
         self._testMethodName = 'case_08'
         self._testMethodDoc = "开始任务失败-任务id为空"

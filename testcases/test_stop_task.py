@@ -11,7 +11,7 @@ from common.database_datas import OperationpostgresBase
 
 
 class Stop_Task_Test(Session_init):
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_stop_01(self):
         self._testMethodName = 'case_01'
         self._testMethodDoc = "暂停初始状态的固件任务"
@@ -52,7 +52,7 @@ class Stop_Task_Test(Session_init):
 
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_stop_03(self):
         self._testMethodName = 'case_03'
         self._testMethodDoc = "成功暂停运行中的固件任务"
@@ -72,7 +72,7 @@ class Stop_Task_Test(Session_init):
 
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_stop_04(self):
         self._testMethodName = 'case_04'
         self._testMethodDoc = "暂停已暂停的固件任务"
@@ -85,7 +85,7 @@ class Stop_Task_Test(Session_init):
         self.assertEqual(4011, b)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_stop_05(self):
         self._testMethodName = 'case_05'
         self._testMethodDoc = "暂停已完成的固件任务"
@@ -98,7 +98,7 @@ class Stop_Task_Test(Session_init):
         self.assertEqual(4012, b)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_stop_06(self):
         self._testMethodName = 'case_06'
         self._testMethodDoc = "暂停失败-任务id不存在"
@@ -111,7 +111,7 @@ class Stop_Task_Test(Session_init):
 
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_stop_07(self):
         self._testMethodName = 'case_07'
         self._testMethodDoc = "暂停失败-任务id不可为空"

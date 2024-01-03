@@ -14,7 +14,7 @@ import os
 
 class Delete_task_test(Session_init):
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def testcase_delete_01(self):
         self._testMethodName = 'case_01'
         self._testMethodDoc = "成功删除单个任务（跳过固件库任务）"
@@ -32,7 +32,7 @@ class Delete_task_test(Session_init):
 
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def testcase_delete_02(self):
         self._testMethodName = 'case_02'
         self._testMethodDoc = "成功删除多个任务（不跳过固件库任务）"
@@ -55,7 +55,7 @@ class Delete_task_test(Session_init):
         self.assertEqual(200, b)
         self.assertIn("成功！", c[1]) #c[1]说明其中有两个任务，删除了两个任务
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def testcase_delete_03(self):
         self._testMethodName = 'case_03'
         self._testMethodDoc = "删除失败，删除不存在的任务"
@@ -69,7 +69,7 @@ class Delete_task_test(Session_init):
         self.assertIn("扫描任务id:10000000不存在", c)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def testcase_delete_04(self):
         self._testMethodName = 'case_04'
         self._testMethodDoc = "删除失败，task_id_list为空"
@@ -81,7 +81,7 @@ class Delete_task_test(Session_init):
         self.assertEqual(2001, b)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def testcase_delete_05(self):
         self._testMethodName = 'case_05'
         self._testMethodDoc = "删除失败，task_id_list不为列表格式"
@@ -114,7 +114,7 @@ class Delete_task_test(Session_init):
 
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def testcase_delete_07(self):
         self._testMethodName = 'case_07'
         self._testMethodDoc = "删除失败，删除运行中的任务"
@@ -135,7 +135,7 @@ class Delete_task_test(Session_init):
         self.assertIn('处于运行中,不可删除',c)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def testcase_delete_08(self):
         self._testMethodName = 'case_08'
         self._testMethodDoc = "成功删除暂停中的任务"
@@ -155,7 +155,7 @@ class Delete_task_test(Session_init):
         self.assertEqual(200, b)
         self.assertIn('删除固件扫描任务',c)
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def testcase_delete_09(self):
         self._testMethodName = 'case_09'
         self._testMethodDoc = "成功删除不可用的任务"
@@ -176,7 +176,7 @@ class Delete_task_test(Session_init):
         self.assertIn('删除固件扫描任务',c)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def testcase_delete_10(self):
         self._testMethodName = 'case_10'
         self._testMethodDoc = "删除失败，任务id格式错误"

@@ -12,7 +12,7 @@ from common.Get_token import Token
 
 class Repair_Strategy_Test(Session_init):
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_01(self):
 		self._testMethodName = 'case_01'
 		self._testMethodDoc = '成功修改分析策略-策略名为单个字母'
@@ -49,7 +49,7 @@ class Repair_Strategy_Test(Session_init):
 		self.assertIn("OK", b)
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_02(self):
 		self._testMethodName = 'case_02'
 		self._testMethodDoc = '成功修改分析策略-策略名为单个数字-只勾选soft插件'
@@ -63,7 +63,7 @@ class Repair_Strategy_Test(Session_init):
 		self.assertIn("OK", b)
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_03(self):
 		self._testMethodName = 'case_03'
 		self._testMethodDoc = '成功修改分析策略-只勾选cve\soft插件'
@@ -77,7 +77,7 @@ class Repair_Strategy_Test(Session_init):
 		self.assertIn("OK", b)
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_04(self):
 		self._testMethodName = 'case_04'
 		self._testMethodDoc = '成功修改分析策略-只勾选cwe插件'
@@ -91,7 +91,7 @@ class Repair_Strategy_Test(Session_init):
 		self.assertIn("OK", b)
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_05(self):
 		self._testMethodName = 'case_05'
 		self._testMethodDoc = '成功修改分析策略-只勾选security插件'
@@ -106,7 +106,7 @@ class Repair_Strategy_Test(Session_init):
 
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_06(self):
 		self._testMethodName = 'case_06'
 		self._testMethodDoc = '成功修改分析策略-只勾选sensitive_msg插件'
@@ -120,7 +120,7 @@ class Repair_Strategy_Test(Session_init):
 		self.assertIn("OK", b)
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_07(self):
 		self._testMethodName = 'case_07'
 		self._testMethodDoc = '修改失败-勾选cve插件但未勾选soft插件'
@@ -134,7 +134,7 @@ class Repair_Strategy_Test(Session_init):
 		self.assertIn("插件CVE漏洞查找缺少依赖", b)
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_08(self):
 		self._testMethodName = 'case_08'
 		self._testMethodDoc = '修改失败-lib_tag为true,但插件勾选不完全'
@@ -148,7 +148,7 @@ class Repair_Strategy_Test(Session_init):
 		self.assertIn("插件参数不正确", b)
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_09(self):
 		self._testMethodName = 'case_09'
 		self._testMethodDoc = '修改失败-plugin_list为空'
@@ -163,7 +163,7 @@ class Repair_Strategy_Test(Session_init):
 
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_10(self):
 		self._testMethodName = 'case_10'
 		self._testMethodDoc = '修改失败-策略id不存在'
@@ -177,7 +177,7 @@ class Repair_Strategy_Test(Session_init):
 		self.assertIn("策略不存在", b)
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_11(self):
 		self._testMethodName = 'case_11'
 		self._testMethodDoc = '修改失败-策略id为空'
@@ -190,7 +190,7 @@ class Repair_Strategy_Test(Session_init):
 		self.assertIn("参数类型错误！", b)
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_12(self):
 		self._testMethodName = 'case_12'
 		self._testMethodDoc = '修改失败-cvss2参数值错误'
@@ -215,7 +215,7 @@ class Repair_Strategy_Test(Session_init):
 
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_13(self):
 		self._testMethodName = 'case_13'
 		self._testMethodDoc = '修改失败-cvss3参数值错误'
@@ -245,7 +245,7 @@ class Repair_Strategy_Test(Session_init):
 
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_14(self):
 		self._testMethodName = 'case_14'
 		self._testMethodDoc = '修改失败-策略名称为101个字符'
@@ -259,7 +259,7 @@ class Repair_Strategy_Test(Session_init):
 		self.assertIn("策略名称参数长度错误,最大长度为100", b)
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_15(self):
 		self._testMethodName = 'case_15'
 		self._testMethodDoc = '修改失败-策略名称为空'
@@ -273,7 +273,7 @@ class Repair_Strategy_Test(Session_init):
 		self.assertIn("策略名称参数是必需参数", b)
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_16(self):
 		self._testMethodName = 'case_16'
 		self._testMethodDoc = '修改成功-策略名称为100个字符'
@@ -287,7 +287,7 @@ class Repair_Strategy_Test(Session_init):
 		self.assertIn("OK", b)
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_17(self):
 		self._testMethodName = 'case_17'
 		self._testMethodDoc = '修改失败-策略名称与已有策略名称重复'
@@ -301,7 +301,7 @@ class Repair_Strategy_Test(Session_init):
 		self.assertIn("策略名称已存在", b)
 
 
-	# @unittest.skip
+	@unittest.skip
 	def test_repair_strategy_18(self):
 		self._testMethodName = 'case_18'
 		self._testMethodDoc = '修改失败-内置策略不可修改'

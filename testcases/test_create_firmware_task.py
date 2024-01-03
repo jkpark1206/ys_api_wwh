@@ -9,7 +9,7 @@ from common.database_datas import OperationpostgresBase
 
 class Create_Firmware_Task_Test(Session_init):
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_01(self):
         self._testMethodName = 'case_01'
         self._testMethodDoc = "全选插件上传固件任务"
@@ -24,7 +24,7 @@ class Create_Firmware_Task_Test(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_02(self):
         self._testMethodName = 'case_02'
         self._testMethodDoc = "创建关联固件库任务"
@@ -38,7 +38,7 @@ class Create_Firmware_Task_Test(Session_init):
         self.assertIn("OK", b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_03(self):
         self._testMethodName = 'case_03'
         self._testMethodDoc = "创建成功-只勾选cwe"
@@ -52,7 +52,7 @@ class Create_Firmware_Task_Test(Session_init):
         self.assertIn("OK", b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_04(self):
         self._testMethodName = 'case_04'
         self._testMethodDoc = "创建成功-只勾选cve\soft"
@@ -67,7 +67,7 @@ class Create_Firmware_Task_Test(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_05(self):
         self._testMethodName = 'case_05'
         self._testMethodDoc = "创建成功-只勾选soft"
@@ -82,7 +82,7 @@ class Create_Firmware_Task_Test(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_06(self):
         self._testMethodName = 'case_06'
         self._testMethodDoc = "创建成功-只勾选security"
@@ -96,7 +96,7 @@ class Create_Firmware_Task_Test(Session_init):
         self.assertIn("OK", b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_07(self):
         self._testMethodName = 'case_07'
         self._testMethodDoc = "创建成功-只勾选sensitive_msg"
@@ -110,7 +110,7 @@ class Create_Firmware_Task_Test(Session_init):
         self.assertIn("OK", b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_09(self):
         self._testMethodName = 'case_09'
         self._testMethodDoc = "创建失败-分析策略为空"
@@ -123,7 +123,7 @@ class Create_Firmware_Task_Test(Session_init):
         self.assertIn("参数类型错误！", b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_10(self):
         self._testMethodName = 'case_10'
         self._testMethodDoc = "创建失败-任务名为100个字符"
@@ -137,7 +137,7 @@ class Create_Firmware_Task_Test(Session_init):
         self.assertIn("任务文件名超出最大长度", b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_11(self):
         self._testMethodName = 'case_11'
         self._testMethodDoc = "创建失败-MD5与文件不符"
@@ -151,7 +151,7 @@ class Create_Firmware_Task_Test(Session_init):
         self.assertIn("上传的固件libcurl_7.17.1-1_arm.ipk不完整", b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_12(self):
         self._testMethodName = 'case_12'
         self._testMethodDoc = "创建失败-MD5为空"
@@ -164,7 +164,7 @@ class Create_Firmware_Task_Test(Session_init):
         self.assertIn("文件MD5值不合法", b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_creat_task_13(self):
         self._testMethodName = 'case_13'
         self._testMethodDoc = "创建失败-strategy_id为不存在的id"

@@ -5,7 +5,7 @@ from common.api_demo import ApiDefine
 
 
 class Task_List_Test(Session_init):
-#用例1：成功获取任务列表
+#
     # @unittest.SkipTest
     def test_get_task_list_01(self):
         self._testMethodName = 'case_01'

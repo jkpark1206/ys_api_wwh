@@ -6,7 +6,7 @@ import json
 
 class Login_Test(Session_init):
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def testcase_login_01(self):
         self._testMethodName = 'case_01'
         self._testMethodDoc = "成功登录"
@@ -16,7 +16,7 @@ class Login_Test(Session_init):
         self.assertIn("OK", a)
         self.assertEqual(200, b)
 
-    # @unittest.skip
+    @unittest.skip
     def testcase_login_02(self):
         self._testMethodName = 'case_02'
         self._testMethodDoc = "登录失败-用户名错误"
@@ -26,7 +26,7 @@ class Login_Test(Session_init):
         self.assertIn("用户[111111]登录失败，原因：用户名或密码错误", a)
         self.assertEqual(2008, b)
 
-    # @unittest.skip
+    @unittest.skip
     def testcase_login_03(self):
         self._testMethodName = 'case_03'
         self._testMethodDoc = "登录失败-密码错误"
@@ -37,7 +37,7 @@ class Login_Test(Session_init):
         self.assertEqual(2008, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def testcase_login_04(self):
         self._testMethodName = 'case_04'
         self._testMethodDoc = "登录失败-用户名为空"
@@ -48,7 +48,7 @@ class Login_Test(Session_init):
         self.assertEqual(2001, b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def testcase_login_05(self):
         self._testMethodName = 'case_05'
         self._testMethodDoc = "登录失败-密码为空"

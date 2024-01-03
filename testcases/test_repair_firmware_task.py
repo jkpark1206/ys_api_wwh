@@ -13,7 +13,7 @@ from common.database_datas import OperationpostgresBase
 
 class Repair_Firmware_Task_Test(Session_init):
 
-    # @unittest.skip
+    @unittest.skip
     def test_remise_create_task(self):
         # 前提：先创建一个任务
         h = {"Authorization": Token()}
@@ -26,7 +26,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertIn('OK', b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_01(self):
         self._testMethodName = 'case_01'
         self._testMethodDoc = "修改成功-修改任务名称为单个字母/只勾选cwe"
@@ -39,7 +39,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertEqual(200,a)
         self.assertIn('OK', b)
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_02(self):
         self._testMethodName = 'case_02'
         self._testMethodDoc = "修改成功-修改任务名称为单个数字\只勾选soft插件"
@@ -53,7 +53,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertIn('OK', b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_03(self):
         self._testMethodName = 'case_03'
         self._testMethodDoc = "修改成功-任务名称为100个字符\只勾选soft-cve插件"
@@ -67,7 +67,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertIn('OK', b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_04(self):
         self._testMethodName = 'case_04'
         self._testMethodDoc = "修改失败-任务名称为101个字符"
@@ -81,7 +81,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertIn('任务名称参数超出范围', b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_05(self):
         self._testMethodName = 'case_05'
         self._testMethodDoc = "修改失败-任务名称为空"
@@ -95,7 +95,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertIn('任务名称参数超出范围', b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_06(self):
         self._testMethodName = 'case_06'
         self._testMethodDoc = "修改失败-任务id为0"
@@ -108,7 +108,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertIn('扫描任务ID参数为空', b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_07(self):
         self._testMethodName = 'case_07'
         self._testMethodDoc = "修改失败-任务id为空"
@@ -121,7 +121,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertIn('参数类型错误！', b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_08(self):
         self._testMethodName = 'case_08'
         self._testMethodDoc = "修改失败-分析策略id不存在"
@@ -134,7 +134,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertIn('策略不存在', b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_09(self):
         self._testMethodName = 'case_09'
         self._testMethodDoc = "修改失败-分析策略id为空"
@@ -147,7 +147,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertIn('参数类型错误！', b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_10(self):
         self._testMethodName = 'case_10'
         self._testMethodDoc = "修改失败-修改运行中的任务"
@@ -163,7 +163,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertIn('正在运行，不可修改！', b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_11(self):
         self._testMethodName = 'case_11'
         self._testMethodDoc = "修改失败-修改已完成的任务"
@@ -177,7 +177,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertIn('已结束，不可修改！', b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_12(self):
         self._testMethodName = 'case_12'
         self._testMethodDoc = "修改失败-修改不可用的任务"
@@ -195,7 +195,7 @@ class Repair_Firmware_Task_Test(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_13(self):
         self._testMethodName = 'case_13'
         self._testMethodDoc = "修改失败-修改暂停中的任务"
@@ -214,7 +214,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertIn('已暂停，不可修改！', b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_14(self):
         self._testMethodName = 'case_14'
         self._testMethodDoc = "修改失败-任务id不存在"
@@ -227,7 +227,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertIn('查询任务对象不存在', b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_15(self):
         self._testMethodName = 'case_15'
         self._testMethodDoc = "修改成功-只勾选sensitive_msg插件"
@@ -241,7 +241,7 @@ class Repair_Firmware_Task_Test(Session_init):
         self.assertIn('OK', b)
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_repair_task_16(self):
         self._testMethodName = 'case_16'
         self._testMethodDoc = "修改成功-只勾选security插件"

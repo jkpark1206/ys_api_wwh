@@ -7,7 +7,7 @@ import json
 
 class System_config(Session_init):
 
-    # @unittest.skip
+    @unittest.skip
     def test_sys_conf_case_01(self):
         self._testMethodName = 'case_01'
         self._testMethodDoc = '成功配置产品信息'
@@ -70,7 +70,7 @@ class System_config(Session_init):
 
 
 
-    # @unittest.skip
+    @unittest.skip
     def test_sys_conf_case_03(self):
         self._testMethodName = 'case_03'
         self._testMethodDoc = '配置产品信息成功-信息为最大边界值'

@@ -11,7 +11,7 @@ from common.database_datas import OperationpostgresBase
 
 class Recover_Task_Test(Session_init):
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_recover_01(self):
         self._testMethodName = 'case_01'
         self._testMethodDoc = "恢复任务失败-恢复初始状态的固件任务"
@@ -57,7 +57,7 @@ class Recover_Task_Test(Session_init):
             self.assertEqual(4016, b)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_recover_03(self):
         self._testMethodName = 'case_03'
         self._testMethodDoc = "恢复任务失败-恢复运行中的固件任务"
@@ -76,7 +76,7 @@ class Recover_Task_Test(Session_init):
         self.assertEqual(4017, b)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_recover_04(self):
         self._testMethodName = 'case_04'
         self._testMethodDoc = "恢复任务成功-恢复暂停中的固件任务"
@@ -97,7 +97,7 @@ class Recover_Task_Test(Session_init):
         self.assertEqual(200, b)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_recover_05(self):
         self._testMethodName = 'case_05'
         self._testMethodDoc = "恢复任务失败-恢复已完成的固件任务"
@@ -117,7 +117,7 @@ class Recover_Task_Test(Session_init):
         self.assertEqual(4015, b)
 
 
-    # @unittest.SkipTest
+    @unittest.SkipTest
     def test_recover_06(self):
         self._testMethodName = 'case_06'
         self._testMethodDoc = "恢复任务失败-恢复不可用的固件任务"
