@@ -1,0 +1,110 @@
+12-26 09:33:07,048459 [INFOR] [userlog] 当前:2023-12-26 09:33:05 用户:wwh 登录成功
+12-26 10:08:22,100905 [INFOR] [userlog] 当前:2023-12-26 10:08:22 用户:wwh 删除固件扫描任务:boot.img, id:11
+12-26 10:08:22,168651 [INFOR] [userlog] 当前:2023-12-26 10:08:21 用户:wwh 创建固件扫描任务:boot.img, id:256
+12-26 10:08:30,479749 [INFOR] [userlog] 当前:2023-12-26 10:08:29 用户:wwh 开始固件扫描任务:boot.img, id:256
+12-26 10:55:07,302531 [INFOR] [userlog] 当前:2023-12-26 10:55:07 用户:wwh 修改策略:all, 并设为默认选项
+12-26 10:55:39,210784 [INFOR] [userlog] 当前:2023-12-26 10:55:38 用户:wwh 登录成功
+12-26 10:55:40,291942 [INFOR] [userlog] 当前:2023-12-26 10:55:40 用户:wwh 删除固件扫描任务:vxWorks.symtab, id:235
+12-26 10:55:40,318443 [INFOR] [userlog] 当前:2023-12-26 10:55:40 用户:wwh 创建固件扫描任务:vxWorks.symtab, id:257
+12-26 10:55:41,132975 [INFOR] [userlog] 当前:2023-12-26 10:55:40 用户:wwh 开始固件扫描任务:vxWorks.symtab, id:257
+12-26 10:55:42,715069 [INFOR] [userlog] 当前:2023-12-26 10:55:42 用户:wwh 删除固件扫描任务:vxWorks_v5_mips_bigendian.bin, id:236
+12-26 10:55:42,744218 [INFOR] [userlog] 当前:2023-12-26 10:55:42 用户:wwh 创建固件扫描任务:vxWorks_v5_mips_bigendian.bin, id:258
+12-26 10:55:43,613452 [INFOR] [userlog] 当前:2023-12-26 10:55:42 用户:wwh 开始固件扫描任务:vxWorks_v5_mips_bigendian.bin, id:258
+12-26 10:55:44,920924 [INFOR] [userlog] 当前:2023-12-26 10:55:44 用户:wwh 删除固件扫描任务:vxWorks.bin.symtab, id:237
+12-26 10:55:44,939871 [INFOR] [userlog] 当前:2023-12-26 10:55:44 用户:wwh 创建固件扫描任务:vxWorks.bin.symtab, id:259
+12-26 10:55:45,649637 [INFOR] [userlog] 当前:2023-12-26 10:55:45 用户:wwh 开始固件扫描任务:vxWorks.bin.symtab, id:259
+12-26 10:55:47,395150 [INFOR] [userlog] 当前:2023-12-26 10:55:47 用户:wwh 删除固件扫描任务:vxWorks_v5_mips_little-endian.bin, id:238
+12-26 10:55:47,436478 [INFOR] [userlog] 当前:2023-12-26 10:55:47 用户:wwh 创建固件扫描任务:vxWorks_v5_mips_little-endian.bin, id:260
+12-26 10:55:48,257394 [INFOR] [userlog] 当前:2023-12-26 10:55:47 用户:wwh 开始固件扫描任务:vxWorks_v5_mips_little-endian.bin, id:260
+12-26 10:55:49,679019 [INFOR] [userlog] 当前:2023-12-26 10:55:49 用户:wwh 删除固件扫描任务:vxWorks.elf, id:239
+12-26 10:55:49,703393 [INFOR] [userlog] 当前:2023-12-26 10:55:49 用户:wwh 创建固件扫描任务:vxWorks.elf, id:261
+12-26 10:55:50,310841 [INFOR] [userlog] 当前:2023-12-26 10:55:49 用户:wwh 开始固件扫描任务:vxWorks.elf, id:261
+12-26 10:55:51,509282 [INFOR] [userlog] 当前:2023-12-26 10:55:51 用户:wwh 删除固件扫描任务:vxWorks_v6_mk68_bigendian.bin, id:240
+12-26 10:55:51,644801 [INFOR] [userlog] 当前:2023-12-26 10:55:51 用户:wwh 创建固件扫描任务:vxWorks_v6_mk68_bigendian.bin, id:262
+12-26 10:55:52,445576 [INFOR] [userlog] 当前:2023-12-26 10:55:51 用户:wwh 开始固件扫描任务:vxWorks_v6_mk68_bigendian.bin, id:262
+12-26 10:55:54,424273 [INFOR] [userlog] 当前:2023-12-26 10:55:54 用户:wwh 删除固件扫描任务:uVxWorks, id:241
+12-26 10:55:54,451885 [INFOR] [userlog] 当前:2023-12-26 10:55:54 用户:wwh 创建固件扫描任务:uVxWorks, id:263
+12-26 10:55:55,235208 [INFOR] [userlog] 当前:2023-12-26 10:55:54 用户:wwh 开始固件扫描任务:uVxWorks, id:263
+12-26 10:55:57,238788 [INFOR] [userlog] 当前:2023-12-26 10:55:57 用户:wwh 删除固件扫描任务:vxWorks_v7_arm_little-endian_nxp_lmx8.bin, id:242
+12-26 10:55:57,257183 [INFOR] [userlog] 当前:2023-12-26 10:55:57 用户:wwh 创建固件扫描任务:vxWorks_v7_arm_little-endian_nxp_lmx8.bin, id:264
+12-26 10:55:57,879807 [INFOR] [userlog] 当前:2023-12-26 10:55:57 用户:wwh 开始固件扫描任务:vxWorks_v7_arm_little-endian_nxp_lmx8.bin, id:264
+12-26 10:56:01,417546 [INFOR] [userlog] 当前:2023-12-26 10:56:01 用户:wwh 删除固件扫描任务:vxWorks_v7_arm_little-endian_nxp_lmx8.elf, id:243
+12-26 10:56:01,429743 [INFOR] [userlog] 当前:2023-12-26 10:56:01 用户:wwh 创建固件扫描任务:vxWorks_v7_arm_little-endian_nxp_lmx8.elf, id:265
+12-26 10:56:02,178987 [INFOR] [userlog] 当前:2023-12-26 10:56:01 用户:wwh 开始固件扫描任务:vxWorks_v7_arm_little-endian_nxp_lmx8.elf, id:265
+12-26 10:56:04,140228 [INFOR] [userlog] 当前:2023-12-26 10:56:04 用户:wwh 删除固件扫描任务:vxWorks_v7_arm_little-endian_nxp_raspberrypi4b.bin, id:245
+12-26 10:56:04,165324 [INFOR] [userlog] 当前:2023-12-26 10:56:04 用户:wwh 创建固件扫描任务:vxWorks_v7_arm_little-endian_nxp_raspberrypi4b.bin, id:266
+12-26 10:56:04,996117 [INFOR] [userlog] 当前:2023-12-26 10:56:04 用户:wwh 开始固件扫描任务:vxWorks_v7_arm_little-endian_nxp_raspberrypi4b.bin, id:266
+12-26 10:56:09,331733 [INFOR] [userlog] 当前:2023-12-26 10:56:09 用户:wwh 删除固件扫描任务:uVxWorks, id:244
+12-26 10:56:09,404102 [INFOR] [userlog] 当前:2023-12-26 10:56:07 用户:wwh 创建固件扫描任务:uVxWorks, id:267
+12-26 10:56:10,133637 [INFOR] [userlog] 当前:2023-12-26 10:56:09 用户:wwh 开始固件扫描任务:uVxWorks, id:267
+12-26 10:56:17,446444 [INFOR] [userlog] 当前:2023-12-26 10:56:17 用户:wwh 删除固件扫描任务:vxWorks_v7_arm_little-endian_nxp_raspberrypi4b.elf, id:246
+12-26 10:56:17,484884 [INFOR] [userlog] 当前:2023-12-26 10:56:17 用户:wwh 创建固件扫描任务:vxWorks_v7_arm_little-endian_nxp_raspberrypi4b.elf, id:268
+12-26 10:56:18,308717 [INFOR] [userlog] 当前:2023-12-26 10:56:17 用户:wwh 开始固件扫描任务:vxWorks_v7_arm_little-endian_nxp_raspberrypi4b.elf, id:268
+12-26 10:56:19,913553 [INFOR] [userlog] 当前:2023-12-26 10:56:19 用户:wwh 删除固件扫描任务:vxWorks_v7_riscv_little_endian.bin, id:248
+12-26 10:56:20,018217 [INFOR] [userlog] 当前:2023-12-26 10:56:19 用户:wwh 创建固件扫描任务:vxWorks_v7_riscv_little_endian.bin, id:269
+12-26 10:56:20,816744 [INFOR] [userlog] 当前:2023-12-26 10:56:20 用户:wwh 开始固件扫描任务:vxWorks_v7_riscv_little_endian.bin, id:269
+12-26 10:56:22,541646 [INFOR] [userlog] 当前:2023-12-26 10:56:22 用户:wwh 删除固件扫描任务:uVxWorks, id:247
+12-26 10:56:22,556597 [INFOR] [userlog] 当前:2023-12-26 10:56:22 用户:wwh 创建固件扫描任务:uVxWorks, id:270
+12-26 10:56:23,288786 [INFOR] [userlog] 当前:2023-12-26 10:56:22 用户:wwh 开始固件扫描任务:uVxWorks, id:270
+12-26 10:56:30,396823 [INFOR] [userlog] 当前:2023-12-26 10:56:30 用户:wwh 删除固件扫描任务:vxWorks_v7_riscv_little_endian.elf, id:249
+12-26 10:56:30,412193 [INFOR] [userlog] 当前:2023-12-26 10:56:30 用户:wwh 创建固件扫描任务:vxWorks_v7_riscv_little_endian.elf, id:271
+12-26 10:56:31,142409 [INFOR] [userlog] 当前:2023-12-26 10:56:30 用户:wwh 开始固件扫描任务:vxWorks_v7_riscv_little_endian.elf, id:271
+12-26 10:56:46,059789 [INFOR] [userlog] 当前:2023-12-26 10:56:46 用户:wwh 删除固件扫描任务:vxWorks, id:250
+12-26 10:56:46,573414 [INFOR] [userlog] 当前:2023-12-26 10:56:46 用户:wwh 创建固件扫描任务:vxWorks, id:272
+12-26 10:56:48,342398 [INFOR] [userlog] 当前:2023-12-26 10:56:47 用户:wwh 开始固件扫描任务:vxWorks, id:272
+12-26 10:56:59,007827 [INFOR] [userlog] 当前:2023-12-26 10:56:58 用户:wwh 删除固件扫描任务:vxWorks_v7_x86_qemu.bin, id:251
+12-26 10:56:59,033395 [INFOR] [userlog] 当前:2023-12-26 10:56:58 用户:wwh 创建固件扫描任务:vxWorks_v7_x86_qemu.bin, id:273
+12-26 10:56:59,978550 [INFOR] [userlog] 当前:2023-12-26 10:56:59 用户:wwh 开始固件扫描任务:vxWorks_v7_x86_qemu.bin, id:273
+12-26 10:57:12,305938 [INFOR] [userlog] 当前:2023-12-26 10:57:12 用户:wwh 删除固件扫描任务:vxWorks_v7_x86_qemu.elf, id:252
+12-26 10:57:12,317773 [INFOR] [userlog] 当前:2023-12-26 10:57:12 用户:wwh 创建固件扫描任务:vxWorks_v7_x86_qemu.elf, id:274
+12-26 10:57:12,929660 [INFOR] [userlog] 当前:2023-12-26 10:57:12 用户:wwh 开始固件扫描任务:vxWorks_v7_x86_qemu.elf, id:274
+12-26 10:57:24,393501 [INFOR] [userlog] 当前:2023-12-26 10:57:24 用户:wwh 删除固件扫描任务:vxWorks_v7_x86_up2.bin, id:253
+12-26 10:57:25,431708 [INFOR] [userlog] 当前:2023-12-26 10:57:24 用户:wwh 创建固件扫描任务:vxWorks_v7_x86_up2.bin, id:275
+12-26 10:57:28,703850 [INFOR] [userlog] 当前:2023-12-26 10:57:27 用户:wwh 开始固件扫描任务:vxWorks_v7_x86_up2.bin, id:275
+12-26 10:57:43,173473 [INFOR] [userlog] 当前:2023-12-26 10:57:43 用户:wwh 删除固件扫描任务:vxWorks_v7_x86_up2.elf, id:254
+12-26 10:57:45,785222 [INFOR] [userlog] 当前:2023-12-26 10:57:43 用户:wwh 创建固件扫描任务:vxWorks_v7_x86_up2.elf, id:276
+12-26 10:57:50,404137 [INFOR] [userlog] 当前:2023-12-26 10:57:49 用户:wwh 开始固件扫描任务:vxWorks_v7_x86_up2.elf, id:276
+12-26 10:57:59,207023 [INFOR] [userlog] 当前:2023-12-26 10:57:59 用户:wwh 删除固件扫描任务:vxWorks-qemu.img, id:255
+12-26 10:57:59,229146 [INFOR] [userlog] 当前:2023-12-26 10:57:59 用户:wwh 创建固件扫描任务:vxWorks-qemu.img, id:277
+12-26 10:58:00,180366 [INFOR] [userlog] 当前:2023-12-26 10:57:59 用户:wwh 开始固件扫描任务:vxWorks-qemu.img, id:277
+12-26 11:07:03,657402 [INFOR] [userlog] 当前:2023-12-26 11:07:02 用户:cxh 登录成功
+12-26 11:07:08,059419 [INFOR] [userlog] 当前:2023-12-26 11:07:08 用户:cxh 退出登录
+12-26 11:07:15,675045 [INFOR] [userlog] 当前:2023-12-26 11:07:14 用户:root 登录成功
+12-26 13:54:09,473573 [INFOR] [userlog] 当前:2023-12-26 13:54:09 用户:root 退出登录
+12-26 13:54:16,085785 [INFOR] [userlog] 当前:2023-12-26 13:54:13 用户:cxh 登录成功
+12-26 13:54:22,021626 [INFOR] [userlog] 当前:2023-12-26 13:54:22 用户:cxh 退出登录
+12-26 13:54:34,892501 [INFOR] [userlog] 当前:2023-12-26 13:54:25 用户:wwh 登录成功
+12-26 15:26:15,873654 [INFOR] [userlog] 当前:2023-12-26 15:26:14 用户:wwh 登录成功
+12-26 15:26:18,610666 [INFOR] [userlog] 当前:2023-12-26 15:26:18 用户:wwh 创建固件扫描任务:340g.bin, id:278
+12-26 15:26:20,446794 [INFOR] [userlog] 当前:2023-12-26 15:26:19 用户:wwh 开始固件扫描任务:340g.bin, id:278
+12-26 15:26:22,040591 [INFOR] [userlog] 当前:2023-12-26 15:26:21 用户:wwh 创建固件扫描任务:613bede5fbaf156efa012fa54acd18b9%libcrypto.so.1.0.0.strip, id:279
+12-26 15:26:24,749818 [INFOR] [userlog] 当前:2023-12-26 15:26:22 用户:wwh 开始固件扫描任务:613bede5fbaf156efa012fa54acd18b9%libcrypto.so.1.0.0.strip, id:279
+12-26 15:26:27,037111 [INFOR] [userlog] 当前:2023-12-26 15:26:26 用户:wwh 创建固件扫描任务:app-车载.bin, id:280
+12-26 15:26:28,615666 [INFOR] [userlog] 当前:2023-12-26 15:26:27 用户:wwh 开始固件扫描任务:app-车载.bin, id:280
+12-26 15:26:32,037804 [INFOR] [userlog] 当前:2023-12-26 15:26:31 用户:wwh 创建固件扫描任务:AFL-2.57b.zip, id:281
+12-26 15:26:35,485936 [INFOR] [userlog] 当前:2023-12-26 15:26:33 用户:wwh 开始固件扫描任务:AFL-2.57b.zip, id:281
+12-26 15:26:38,344128 [INFOR] [userlog] 当前:2023-12-26 15:26:38 用户:wwh 暂停固件扫描任务:app-车载.bin, id:280
+12-26 15:26:38,541489 [INFOR] [userlog] 当前:2023-12-26 15:26:38 用户:wwh 删除固件扫描任务:app-车载.bin, id:280
+12-26 15:26:40,113887 [INFOR] [userlog] 当前:2023-12-26 15:26:37 用户:wwh 创建固件扫描任务:app-车载.bin, id:282
+12-26 15:26:41,658992 [INFOR] [userlog] 当前:2023-12-26 15:26:40 用户:wwh 开始固件扫描任务:app-车载.bin, id:282
+12-26 15:26:44,098576 [INFOR] [userlog] 当前:2023-12-26 15:26:43 用户:wwh 创建固件扫描任务:atmaserver, id:283
+12-26 15:26:47,594830 [INFOR] [userlog] 当前:2023-12-26 15:26:45 用户:wwh 开始固件扫描任务:atmaserver, id:283
+12-26 15:26:50,754581 [INFOR] [userlog] 当前:2023-12-26 15:26:50 用户:wwh 创建固件扫描任务:boot.img, id:284
+12-26 15:26:53,162632 [INFOR] [userlog] 当前:2023-12-26 15:26:51 用户:wwh 开始固件扫描任务:boot.img, id:284
+12-26 15:26:54,673526 [INFOR] [userlog] 当前:2023-12-26 15:26:54 用户:wwh 创建固件扫描任务:cfg_dfg_test.zip, id:285
+12-26 15:26:56,638675 [INFOR] [userlog] 当前:2023-12-26 15:26:54 用户:wwh 开始固件扫描任务:cfg_dfg_test.zip, id:285
+12-26 15:26:58,983833 [INFOR] [userlog] 当前:2023-12-26 15:26:58 用户:root 登录成功
+12-26 15:39:38,124209 [INFOR] [userlog] 当前:2023-12-26 15:39:38 用户:root 暂停固件扫描任务:cfg_dfg_test.zip, id:285
+12-26 15:39:38,638251 [INFOR] [userlog] 当前:2023-12-26 15:39:38 用户:root 暂停固件扫描任务:boot.img, id:284
+12-26 15:39:39,139557 [INFOR] [userlog] 当前:2023-12-26 15:39:39 用户:root 暂停固件扫描任务:atmaserver, id:283
+12-26 15:39:40,854420 [INFOR] [userlog] 当前:2023-12-26 15:39:40 用户:root 暂停固件扫描任务:app-车载.bin, id:282
+12-26 15:39:41,506222 [INFOR] [userlog] 当前:2023-12-26 15:39:41 用户:root 暂停固件扫描任务:AFL-2.57b.zip, id:281
+12-26 15:39:43,287875 [INFOR] [userlog] 当前:2023-12-26 15:39:43 用户:root 暂停固件扫描任务:340g.bin, id:278
+12-26 15:39:48,469201 [INFOR] [userlog] 当前:2023-12-26 15:39:48 用户:root 删除固件扫描任务:cfg_dfg_test.zip, id:285
+12-26 15:39:48,469233 [INFOR] [userlog] 当前:2023-12-26 15:39:48 用户:root 删除固件扫描任务:boot.img, id:284
+12-26 15:39:48,469245 [INFOR] [userlog] 当前:2023-12-26 15:39:48 用户:root 删除固件扫描任务:atmaserver, id:283
+12-26 15:39:48,469256 [INFOR] [userlog] 当前:2023-12-26 15:39:48 用户:root 删除固件扫描任务:app-车载.bin, id:282
+12-26 15:39:48,469267 [INFOR] [userlog] 当前:2023-12-26 15:39:48 用户:root 删除固件扫描任务:AFL-2.57b.zip, id:281
+12-26 15:39:48,469278 [INFOR] [userlog] 当前:2023-12-26 15:39:48 用户:root 删除固件扫描任务:613bede5fbaf156efa012fa54acd18b9%libcrypto.so.1.0.0.strip, id:279
+12-26 15:39:48,469289 [INFOR] [userlog] 当前:2023-12-26 15:39:48 用户:root 删除固件扫描任务:340g.bin, id:278
+
