@@ -9,7 +9,7 @@ class config:
 # 配置URL地址
     @property
     def URL(self):
-        return 'http://192.168.5.242:8011/'
+        return 'http://192.168.1.186:8011/'
 
 # 配置用户登录名、密码
     @property
@@ -33,7 +33,7 @@ class config:
 #配置连接数据库相关信息
     @property
     def host(self):
-        return '192.168.5.242'
+        return '192.168.1.186'
 
     @property
     def port(self):
