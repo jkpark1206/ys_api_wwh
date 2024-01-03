@@ -25,11 +25,9 @@ class Log_user_test(Session_init):
         file = res.content
         fileData = ZipFile(BytesIO(file))
         fileData.extractall(local_config.Log_user_file)
-        try:
-            a = res.status_code
-            self.assertEqual(200,a)
-        except Exception as e:
-            print(e)
+        a = res.status_code
+        self.assertEqual(200,a)
+
 
 
     # @unittest.skip
@@ -44,13 +42,11 @@ class Log_user_test(Session_init):
             "end_time":"2022-10-28 14:46:31"
         }
         res = ApiDefine().User_log(self.session,d,h).text
-        try:
-            a = json.loads(res)["code"]
-            b = json.loads(res)["message"]
-            self.assertEqual(7009,a)
-            self.assertIn("没有符合条件的日志文件",b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["code"]
+        b = json.loads(res)["message"]
+        self.assertEqual(7009,a)
+        self.assertIn("没有符合条件的日志文件",b)
+
 
 
 

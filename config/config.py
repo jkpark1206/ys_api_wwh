@@ -9,7 +9,7 @@ class config:
 # 配置URL地址
     @property
     def URL(self):
-        return 'http://192.168.1.208:8011/'
+        return 'http://192.168.1.186:8011/'
 
 # 配置用户登录名、密码
     @property
@@ -24,10 +24,16 @@ class config:
     def Anban_Passwd(self):
         return '6b5c557da96612408d2844af0d9f5e5d'
 
+#密保密码
+    @property
+    def Security_Password(self):
+        return 'update_user_password'
+
+
 #配置连接数据库相关信息
     @property
     def host(self):
-        return '192.168.1.208'
+        return '192.168.1.186'
 
     @property
     def port(self):
@@ -93,7 +99,7 @@ class config:
 #不可用固件
     @property
     def unavailable_task_path(self):
-        return os.path.dirname(self.parent_path) + '\\firmware\\测试固件\\dsp.ko'
+        return os.path.dirname(self.parent_path) + '\\firmware\\测试固件\\miwifi_r1cl_firmware_1b415_2.12.9.bin_20231208.pdf'
 
 # 65个字符固件
     @property
@@ -113,17 +119,21 @@ class config:
 #勾选不同插件
     @property
     def Plugin_All(self):
-        return '''["cwe_checker","software_components","cve_lookup","crypto_hints","elf_analysis","ip_and_uri_finder","users_and_passwords","elf_checksec"]'''
+        return '''["software_components","cve_lookup","crypto_hints","cwe_checker","elf_analysis","elf_checksec","sensitive_msg"]'''
 
 
     @property
     def Plugin_Cwe0(self):
-        return  '''["software_components","cve_lookup","crypto_hints","elf_analysis","ip_and_uri_finder","users_and_passwords","elf_checksec"]'''
+        return  '''["software_components","cve_lookup","crypto_hints","elf_analysis","sensitive_msg","elf_checksec"]'''
 
 
     @property
     def Plugin_Cve0(self):
-        return  '''["cwe_checker","software_components","crypto_hints","elf_analysis","ip_and_uri_finder","users_and_passwords","elf_checksec"]'''
+        return  '''["cwe_checker","software_components","crypto_hints","elf_analysis","sensitive_msg","elf_checksec"]'''
+
+    @property
+    def Plugin0(self):
+        return  '''[]'''
 
 
     @property
@@ -164,6 +174,35 @@ class config:
     def Logo_png_over_path(self):
         return os.path.dirname(self.parent_path)+'\\Logo_file\\超大PNG图片.png'
 
+
+    @property
+    def plugin_cwe(self):
+        return '["cwe"]'
+
+    @property
+    def plugin_cve(self):
+        return '["cve"]'
+
+    @property
+    def plugin_cve_soft(self):
+        return '["soft","cve"]'
+
+    @property
+    def plugin_soft(self):
+        return '["soft"]'
+
+    @property
+    def plugin_sensitive_msg(self):
+        return '["sensitive_msg"]'
+
+
+    @property
+    def plugin_security(self):
+        return '["security"]'
+
+    @property
+    def plugin_all(self):
+        return '["soft", "cve", "cwe", "security", "sensitive_msg"]'
 
 
 local_config = config()

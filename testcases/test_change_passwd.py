@@ -13,7 +13,7 @@ class Change_passwd_test(Session_init):
         data = {
         "username":local_config.Username,
         "password":local_config.Passwd,
-        "message":"安般"
+        "message":local_config.Security_Password
             }
         res = ApiDefine().Change_Passwd(self.session,data)
         a = json.loads(res)["message"]
@@ -29,7 +29,7 @@ class Change_passwd_test(Session_init):
         data = {
         "username":"zz",
         "password":local_config.Passwd,
-        "message":"安般"
+        "message":local_config.Security_Password
             }
         res = ApiDefine().Change_Passwd(self.session,data)
         a = json.loads(res)["message"]
@@ -61,7 +61,7 @@ class Change_passwd_test(Session_init):
         data = {
         "username":'',
         "password":local_config.Passwd,
-        "message":"安般"
+        "message":local_config.Security_Password
             }
         res = ApiDefine().Change_Passwd(self.session,data)
         a = json.loads(res)["message"]
@@ -77,7 +77,7 @@ class Change_passwd_test(Session_init):
         data = {
         "username":local_config.Username,
         "password":'',
-        "message":"安般"
+        "message":local_config.Security_Password
             }
         res = ApiDefine().Change_Passwd(self.session,data)
         a = json.loads(res)["message"]

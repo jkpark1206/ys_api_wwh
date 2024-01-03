@@ -1,8 +1,4 @@
 import hashlib
-# from config.config import local_config
-import os
-# path = 'C:\\Users\\Administrator\\Desktop\\gujianhuizong\\test\\recovery(11.7M).img'
-
 
 #通过传入固件路径，获取该固件的MD5值
 def Get_file_md5(file_path):
@@ -17,5 +13,4 @@ def Get_file_md5(file_path):
         return False
 
 
-# if __name__=='__main__':
-#     print(Get_file_md5(path))
+

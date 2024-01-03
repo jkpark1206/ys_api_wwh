@@ -73,6 +73,7 @@ class OperationpostgresBase:
         except Exception as e:
             loguru.logger.info(e)
             self.cur.close()
+
     def Finished_task(self):
         self.cur.execute(
             "select id,task_name from ys_firmware_scan_task where task_status = 3 and is_delete='f' order by id desc Limit 2")
@@ -85,8 +86,34 @@ class OperationpostgresBase:
         task_id = self.cur.fetchall()
         return task_id
 
+
+    def Get_strategy_id(self):
+        self.cur.execute("SELECT id FROM ys_task_strategy where is_delete ='f' ORDER BY id desc limit 1 ")
+        strategy_id = self.cur.fetchall()[0][0]
+        return strategy_id
+
+
+    def Get_initial_strategy(self):
+        self.cur.execute("SELECT id FROM ys_task_strategy where is_delete ='f'  and origin_default = 't' ORDER BY id desc limit 1")
+        initial_strategy_id = self.cur.fetchall()[0][0]
+        return initial_strategy_id
+
+
+    def all_strategy_id(self,plugin):
+        self.cur.execute("SELECT id FROM ys_task_strategy where is_delete ='f' and plugin_list='{}' ORDER BY id desc limit 1".format(plugin))
+        id = self.cur.fetchall()[0][0]
+        return id
+
+    def lib_strategy_id(self):
+        plugin = '["soft", "cve", "cwe", "security", "sensitive_msg"]'
+        self.cur.execute(
+            "SELECT id FROM ys_task_strategy where is_delete ='f' and plugin_list='{}' and lib_tag='t' ORDER BY id desc limit 1".format(plugin))
+        id = self.cur.fetchall()[0][0]
+        return id
+
+
 if __name__=='__main__':
-    print(OperationpostgresBase().Sql_connect(2))
+    print(OperationpostgresBase().lib_strategy_id())
 
 
 

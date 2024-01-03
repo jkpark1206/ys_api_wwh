@@ -18,17 +18,14 @@ class Get_sys_log(Session_init):
             "limit": 100,
             "keywords": "",
             "sort_by": 0,
-            "start_time": "2022-08-08 14:46:20",
-            "end_time": "2022-09-28 14:46:31"
+            "start_time": "2023-12-01 00:00:00",
+            "end_time": "2024-01-06 23:59:59"
         }
         res = ApiDefine().Get_sys_log(self.session,d,h)
-        try:
-            a = json.loads(res)["code"]
-            b = json.loads(res)["message"]
-            self.assertEqual(200,a)
-            self.assertIn("OK",b)
-        except Exception as e:
-            print(e)
+        a = json.loads(res)["code"]
+        b = json.loads(res)["message"]
+        self.assertEqual(200,a)
+        self.assertIn("OK",b)
 
 
 
