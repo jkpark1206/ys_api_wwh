@@ -18,8 +18,8 @@ class Log_user_test(Session_init):
         h = {"Authorization":token}
         d = {
             "log_tag":2,    #此字段是用户日志
-            "start_time":"2023-07-01 14:46:20",
-            "end_time":"2024-10-28 14:46:31"
+            "start_time":"2024-01-03 00:00:00",
+            "end_time":"2024-01-03 23:59:59"
         }
         res = ApiDefine().User_log(self.session,d,h)
         file = res.content

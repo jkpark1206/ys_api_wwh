@@ -145,7 +145,7 @@ class config:
     @property
     def Log_user_file(self):
         cur_time = time.strftime("%Y%m%d-%H%M%S", time.localtime())
-        log_file_user = os.path.dirname(self.parent_path)+'\\Log\\{}userlog'.format(cur_time)
+        log_file_user = os.path.dirname(self.parent_path)+'\\Log\\userlog'.format(cur_time)
         return log_file_user
 
     @property

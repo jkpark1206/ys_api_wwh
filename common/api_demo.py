@@ -1,5 +1,4 @@
 import time
-
 import requests
 from config.config import local_config
 from jsonpath import jsonpath
